@@ -153,7 +153,7 @@ Enter the following values for each parameters:
 * Name: dbtest
 * Git Repository URL: https://github.com/VeerMuchandi/dbtest
 ```
-Click onto the link "Show advanced routing, build, and deployment options", go to Deployment Configuration section and enter the following environment variables:
+Click onto the link "Show advanced options", go to Deployment Configuration section and enter the following environment variables:
 
 
 ![image](images/dbtest_deployment_env.png)
