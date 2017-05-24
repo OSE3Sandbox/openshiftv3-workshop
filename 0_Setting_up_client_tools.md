@@ -1,6 +1,7 @@
 ## Setting up client tools
 
 In this Lab we will look at how to install the OpenShift CLI tools.
+Make sure you are using a CLI version that matches the OpenShift server version. The current version for this workshop is OpenShift 3.5 (Origin 1.5).  Older version may work, but some issue may occur.
 
 **Installing the Command-line Tools**
 
@@ -18,14 +19,18 @@ tools to interact with each component of a system. The binaries for Mac, Windows
 and Linux are available for download from the Red Hat Customer Portal via the
 following link:
 
-Portal https://access.redhat.com/downloads/content/290
+Red Hat Portal (Red Hat Login required) https://access.redhat.com/downloads/content/290
+
+or
+
+OpenShift Origin:  https://www.openshift.org/download.html
 
 **Installing the CLI tools**
 
 The CLI is provided as compressed files that can be decompressed to any
 directory. In order to make it simple for any user to access the OSE CLI, it is
 recommended that it is made available in a directory mapped to the environment
-variable called `PATH` from the OS. More information can be found about installation process here: https://docs.openshift.com/container-platform/3.3/cli_reference/get_started_cli.html
+variable called `PATH` from the OS. More information can be found about installation process here: https://docs.openshift.com/container-platform/3.5/cli_reference/get_started_cli.html
 
 1. **OSX and Linux:**
 
