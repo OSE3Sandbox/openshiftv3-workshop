@@ -18,7 +18,7 @@
 Now that you know the basics, please explore the platform. Here are a few suggestions, but you may try with your own code and applications.
 
 
-* Lab - Install GitLab and Configure with Ansible
+* Lab - [Install GitLab and Configure with Ansible](xtra4_GitLab.md)
 
 * Lab - Big Data with Spark and RADAnalytics
    * Lab 1 - [Spark intro (with Zeppelin)](xtra1_Spark-intro.md)
