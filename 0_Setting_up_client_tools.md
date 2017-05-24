@@ -38,7 +38,7 @@ variable called `PATH` from the OS. More information can be found about installa
 
 2. **RHEL:**
 
-  1.1. For Red Hat Enterprise Linux (RHEL) 7, you can install the CLI as an RPM using Red Hat Subscription Management (RHSM) if you have an active OpenShift Enterprise subscription on your Red Hat account:
+	1.1. For Red Hat Enterprise Linux (RHEL) 7, you can install the CLI as an RPM using Red Hat Subscription Management (RHSM) if you have an active OpenShift Enterprise subscription on your Red Hat account:
 
 ```shell
   $ sudo subscription-manager attach --pool=<OPENSHIFT_pool_ID>
