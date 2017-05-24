@@ -35,9 +35,9 @@ On **Build Configuration** add a new *Environment Variable*.
 
 ```
 name: MAVEN_MIRROR_URL
-value: <nexus_url>/repository/maven-public/
+value: <nexus_url>/repository/maven-public/   (use the one below)
 
-Ex:-   http://nexus.ci.svc.cluster.local:8081/nexus/content/groups/public/
+For this workshop, please use this one:-   http://nexus.ci.svc.cluster.local:8081/nexus/content/groups/public/
 ```
 **REMEMBER:** Check with your instructor the proper URL for the Nexus repository.
 
