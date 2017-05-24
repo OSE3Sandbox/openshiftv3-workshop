@@ -89,7 +89,7 @@ Now add a route to the service with the following command. `oc expose` command w
 **Note**: In this example, I am using a domain name of `apps.osecloud.com`. **Ask the instructor for the domain name suffix** for your setup an change it.
 
 ````
-$ oc expose service welcome 
+$ oc expose service welcome --name=welcome --hostname=welcome.UserName.<<DomainNameSuffix>>
 
 NAME      HOST/PORT                     PATH      SERVICE   LABELS
 welcome   welcome.UserName.apps.osecloud.com             welcome   
