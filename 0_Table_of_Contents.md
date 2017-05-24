@@ -26,6 +26,7 @@ Now that you know the basics, please explore the platform. Here are a few sugges
 
 * Lab - Big Data with Spark and RADAnalytics
    * Lab 1 - [Spark intro (with Zeppelin)](xtra1_Spark-intro.md)
+   * Lab 2 - [Spark and RADAnalytics)](xtra2_Spark-radanalytics.md)
 
 * Lab - MicroServices with Wildfly Swarm, Node.js, SpringBoot, Netflix OSS
 
