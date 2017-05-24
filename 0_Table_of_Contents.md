@@ -10,14 +10,27 @@
 * Lab 6. [Scale Up Scale Down and Idle the application instances](6_Scale_up_and_Scale_down_the_application_instances.md)
 * Lab 7. [Binary deployment of a war file](7_Binary_Deployment_of_a_war_file.md)
 * <del> Lab 8. [Using SSL In your Application](8_Using_SSL_In_your_Application.md) </del>
-* Lab 9. [Blue-Green Deployments](9_Blue_Green_Deployments.md)
-<del> Lab 10. [SCM - Web Hooks](10_SCM_Web_Hooks.md) </del>
-* Lab 11.  [Rollback Applications](11_Rollback_Applications.md)
-* Lab 12.  [Code Promotion Across Environments](12_Code_Promotion_Across_Environments.md)
-<del> Lab 13.  [Using JBoss Development Studio](13_Using_JBoss_Development_Studio.md) </del>
-* Lab 14. [Deploy Spring Boot Application](14_Deploy_a_Spring_Boot_Application.md)
-* Lab 15. [Adding Spring Boot to Project Catalog](15_Adding_Spring_Boot_S2I_Image_to_the_Project_Catalog.md)
-* Lab 16. [Adding Database to your SpringBoot App](16_Adding_database_to_your_Spring_Boot_Application.md)
-* Lab 17. [Dynamic Configuration updates using ConfigMap](17_Dynamic_Configuration_Updates_using_ConfigMap.md)
-* Lab 18. [Changing code on the fly](18_Changing_code_on_the_fly.md)
-* Lab 19. [Creating a CI/CD Pipeline](19._Creating_a_Pipeline.md)
+* <del> Lab 9. [Blue-Green Deployments](9_Blue_Green_Deployments.md) </del>
+* <del> Lab 10. [SCM - Web Hooks](10_SCM_Web_Hooks.md) </del>
+* Lab 8.  [Rollback Applications](11_Rollback_Applications.md)
+* Lab 9.  [Code Promotion Across Environments](12_Code_Promotion_Across_Environments.md)
+*<del> Lab 13.  [Using JBoss Development Studio](13_Using_JBoss_Development_Studio.md) </del>
+* Lab 10. [Dynamic Configuration updates using ConfigMap](17_Dynamic_Configuration_Updates_using_ConfigMap.md)
+* Lab 11. [Changing code on the fly](18_Changing_code_on_the_fly.md)
+* Lab 12. [Creating a CI/CD Pipeline](19._Creating_a_Pipeline.md)
+### END OF GUIDED LABS
+Now that you know the basics, please explore the platform. Here are a few suggestions, but you may try with your own code and applications.
+
+
+* Lab - Install GitLab and Configure with Ansible
+
+* Lab - Big Data with Spark and RADAnalytics
+
+* Lab MicroServices - Wildfly Swarm, Node.js, SpringBoot, Netflix OSS
+
+* Lab Coolstore - JBoss EAP 7 and Node.js
+
+* Lab SpringBoot     
+    * part 1. [Deploy Spring Boot Application](14_Deploy_a_Spring_Boot_Application.md)
+    * part 2. [Adding Spring Boot to Project Catalog](15_Adding_Spring_Boot_S2I_Image_to_the_Project_Catalog.md)
+    * part 3. [Adding Database to your SpringBoot App](16_Adding_database_to_your_Spring_Boot_Application.md)
