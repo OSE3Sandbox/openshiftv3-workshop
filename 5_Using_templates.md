@@ -40,7 +40,7 @@ Click the **Create** button.
 
 ![image](images/mysql_ephemeral_creation.png)
 
-Click **Go to overview**.
+Click **Continue to overview**.
 
 ![image](images/mysql_pod_on_proj_details.png)
 
