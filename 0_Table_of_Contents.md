@@ -25,10 +25,11 @@ Now that you know the basics, please explore the platform. Here are a few sugges
 * Lab - Install GitLab and Configure with Ansible
 
 * Lab - Big Data with Spark and RADAnalytics
+   * Lab 1 - [Spark intro (with Zeppelin)](xtra1_Spark-intro.md)
 
-* Lab MicroServices - Wildfly Swarm, Node.js, SpringBoot, Netflix OSS
+* Lab - MicroServices with Wildfly Swarm, Node.js, SpringBoot, Netflix OSS
 
-* Lab Coolstore - JBoss EAP 7 and Node.js
+* Lab - Coolstore with JBoss EAP 7 and Node.js
 
 * Lab SpringBoot     
     * part 1. [Deploy Spring Boot Application](14_Deploy_a_Spring_Boot_Application.md)
