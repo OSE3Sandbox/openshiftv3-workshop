@@ -89,7 +89,7 @@ Now add a route to the service with the following command. `oc expose` command w
 **Note**: In this example, I am using a domain name of `apps.osecloud.com`. **Ask the instructor for the domain name suffix** for your setup an change it.
 
 ````
-$ oc expose service welcome --name=welcome --hostname=welcome.UserName.<<DomainNameSuffix>>
+$ oc expose service welcome 
 
 NAME      HOST/PORT                     PATH      SERVICE   LABELS
 welcome   welcome.UserName.apps.osecloud.com             welcome   
@@ -131,7 +131,7 @@ welcome-1-8d7nk   1/1       Running   0          4h
 Now you can delete all these components by running one command.
 
 ````
-$ oc delete all --all
+$ oc delete all -l app=welcome
 
 imagestream "welcome" deleted
 deploymentconfig "welcome" deleted
