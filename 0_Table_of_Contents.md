@@ -14,7 +14,7 @@
 * <del> Lab 10. [SCM - Web Hooks](10_SCM_Web_Hooks.md) </del>
 * Lab 8.  [Rollback Applications](11_Rollback_Applications.md)
 * Lab 9.  [Code Promotion Across Environments](12_Code_Promotion_Across_Environments.md)
-*<del> Lab 13.  [Using JBoss Development Studio](13_Using_JBoss_Development_Studio.md) </del>
+* <del> Lab 13.  [Using JBoss Development Studio](13_Using_JBoss_Development_Studio.md) </del>
 * Lab 10. [Dynamic Configuration updates using ConfigMap](17_Dynamic_Configuration_Updates_using_ConfigMap.md)
 * Lab 11. [Changing code on the fly](18_Changing_code_on_the_fly.md)
 * Lab 12. [Creating a CI/CD Pipeline](19._Creating_a_Pipeline.md)
@@ -34,3 +34,8 @@ Now that you know the basics, please explore the platform. Here are a few sugges
     * part 1. [Deploy Spring Boot Application](14_Deploy_a_Spring_Boot_Application.md)
     * part 2. [Adding Spring Boot to Project Catalog](15_Adding_Spring_Boot_S2I_Image_to_the_Project_Catalog.md)
     * part 3. [Adding Database to your SpringBoot App](16_Adding_database_to_your_Spring_Boot_Application.md)
+
+* Lab for Operators
+    * Lab 1 - Managing quotas
+    * Lab 2 - Managing storage
+    * Lab 3 - Networking
