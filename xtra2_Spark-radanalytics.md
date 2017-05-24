@@ -1,5 +1,4 @@
-<xmp theme="openshift" style="display:none;">
-#**Lab - Apache Spark and RADAnalytics on Openshift**
+**Lab - Apache Spark and RADAnalytics on Openshift**
 
 Lets take the Apache Spark big data cluster projects for a test drive on openShift - as documented in the http://radanalytics.io/ website.
 
@@ -129,6 +128,3 @@ Congratulations ! You have successfully:
 
 * deployed Oshinko console and Apache spark cluster onto OpenShift
 * demonstrated a big data application that trains models for performing Word2vec queries against online books
-
-
-</xmp>
