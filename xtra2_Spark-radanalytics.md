@@ -13,6 +13,9 @@ The example `Ophicleide Word2vec` application is a cloud native application that
 
 **Step 1: Create an Apache Spark Cluster using Oshinko Console**
 
+When you login to openshift, you should be able to see the `Spark Cluster` button on the left hand side. It is a console extension that was deployed for this hackathon.
+
+
 Create a project as developer user:
 
     oc new-project oshinko --description="Oshinko Apache Spark Cluster" --display-name="Oshinko Apache Spark Cluster"
