@@ -101,7 +101,7 @@ scm-web-hooks   172.30.71.191   <none>        8080/TCP   4m
 
 **Remember** to substitute the UserName.
 ```
-$ oc expose service scm-web-hooks --hostname=scm-web-hooks.UserName.apps.osecloud.com
+$ oc expose service scm-web-hooks
 NAME            HOST/PORT                                  PATH      SERVICE         LABELS              TLS TERMINATION
 scm-web-hooks   scm-web-hooks.UserName.apps.osecloud.com             scm-web-hooks   app=scm-web-hooks   
 ```
