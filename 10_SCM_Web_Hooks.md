@@ -8,11 +8,20 @@ application via a GitHub Web Hook trigger.
 
 In Part I of the Lab we will:
 
+- Import an application in your gitlab server
 - Create a new project.
 - Deploy an application using a source to image strategy.
 - Create a route to expose the newly deployed application.
 
-**Step 1: Create new project**
+**Step 1:**
+We will import the bluegreen app previously used in your gitlab server.
+On your gitlab server, create a new project named lab-webhook, In 440763
+"Import project from" select "git repo by url" and type this url :
+https://github.com/RedHatWorkshops/bluegreen
+
+![image](images/gitlab-webhook.png)
+
+**Step 2: Create new project**
 
 **Remember** to substitute the UserName
 
@@ -20,15 +29,15 @@ In Part I of the Lab we will:
 $ oc new-project scm-web-hooks-UserName --display-name="Test WebHooks"
 ```
 
-**Step 2: Create new application**
+**Step 3: Create new application**
 
-- We will use the blugreen app 
+- We will use the blugreen app
 
 ```
 $ oc new-app --image-stream=php --code=https://github.com/RedHatWorkshops/bluegreen --name=scm-web-hooks
 ```
 
-**Step 3: Look at some of the created resources**
+**Step 4: Look at some of the created resources**
 
 - Build configuration
 
@@ -90,7 +99,7 @@ Pushed 5/5 layers, 100% complete
 Push successful
 ```
 
-**Step 4: Create a route**
+**Step 5: Create a route**
 
 ```
 $ oc get service
@@ -105,7 +114,7 @@ $ oc expose service scm-web-hooks
 NAME            HOST/PORT                                  PATH      SERVICE         LABELS              TLS TERMINATION
 scm-web-hooks   scm-web-hooks.UserName.apps.osecloud.com             scm-web-hooks   app=scm-web-hooks   
 ```
-**Step 5: Test the application**
+**Step 6: Test the application**
 
 - Use the newly created route, in the above case `scm-web-hooks.UserName.apps.osecloud.com` and paste it in your browser.
 
