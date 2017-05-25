@@ -149,23 +149,21 @@ In this part of the Lab we will:
 - Select your **Test WebHooks** project, and click **Builds** and then **Builds**.
 - Click onto the build name from the list. You should have just one in this case.
 - Click **Configuration** tab to get list of **Triggers** for the GitHub link.
-- Copy the **GitHub webhook URL**. You will need this URL for next step.
+- Copy the **Generic Webhook URL**. You will need this URL for next step.
 
 ![image](images/github_show_url.png)
 
 **Step 2: Configure GitHub repository Web Hook**
 
-- Login to your GitHub account.
+- Login to your Gitlab account.
 - Navigate to the forked repository you used to create the application.
-- Click on Settings.
-- Click on Webhooks.
-- Click on the **Add webhook** button.
+- Click on Settings
+- Click on Integrations
 - Add the recently copied Web Hook URL from OpenShift.
-- Change the Content-type as "application/json"
-- Click on the **Disable SSL Verification** button.
-- Confirm by adding the **Add Webhook** button in green at the bottom of the page.
+- Uncheck the **Enable SSL Verification**
+- Confirm by adding the **Add webhook** button in green at the bottom of the page.
 
-![image](images/github_add_webhook.jpg)
+![image](images/gitlab-webhook2.jpg)
 
 **Step 3: Redeploy the application**
 
