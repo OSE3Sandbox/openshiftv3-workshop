@@ -163,7 +163,7 @@ In this part of the Lab we will:
 - Uncheck the **Enable SSL Verification**
 - Confirm by adding the **Add webhook** button in green at the bottom of the page.
 
-![image](images/gitlab-webhook2.jpg)
+![image](images/gitlab-webhook2.png)
 
 **Step 3: Redeploy the application**
 
