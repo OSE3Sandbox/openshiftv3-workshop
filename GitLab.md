@@ -28,4 +28,4 @@ You should see :
 
 Create a new account then login.  You can also login as root, using any password ... You should take note of this very secure practice :)   
 
-Create a project and put some files in.  You can git clone, git add and git push your project on your laptop to validate that your installation.
+Create a project and start to put some files in. Validate that it works using what you have learned during the Git presentation.   
