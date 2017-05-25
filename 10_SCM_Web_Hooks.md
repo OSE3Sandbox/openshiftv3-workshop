@@ -168,7 +168,7 @@ In this part of the Lab we will:
 **Step 3: Redeploy the application**
 
 - Edit in your Gitlab account the `image.php` file.
-- Change the title of the page
+- Change the title of the page.
 - Commit the file and go to the openshift web console.
 
 **Step 4: Monitor new deployment process**
@@ -187,5 +187,4 @@ $ oc logs build/the-new-build-process-name
 ## Summary
 
 We have shown in this Lab how simple it is to configure automatic deployments
-of applications using OpenShift and GitHub Web Hook triggers. It should be noted
-that OpenShift also supports Generic Web Hooks.
+of applications using OpenShift and Gitlab Web Hook triggers (this is also working with Github).
