@@ -22,12 +22,10 @@ $ oc new-project scm-web-hooks-UserName --display-name="Test WebHooks"
 
 **Step 2: Create new application**
 
-- We will use the forked repository from the previous lab.
-
-**Remember** to substitute the UserName.
+- We will use the blugreen app 
 
 ```
-$ oc new-app --image-stream=php --code=https://github.com/your_github_username/bluegreen.git --name=scm-web-hooks
+$ oc new-app --image-stream=php --code=https://github.com/RedHatWorkshops/bluegreen --name=scm-web-hooks
 ```
 
 **Step 3: Look at some of the created resources**
