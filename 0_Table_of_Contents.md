@@ -9,11 +9,12 @@
 * Lab 5. [Creating an application with frontend and backend database using templates](5_Using_templates.md)
 * Lab 6. [Scale Up Scale Down and Idle the application instances](6_Scale_up_and_Scale_down_the_application_instances.md)
 * Lab 7. [Binary deployment of a war file](7_Binary_Deployment_of_a_war_file.md)
-* Lab 8.  [Rollback Applications](11_Rollback_Applications.md)
-* Lab 9.  [Code Promotion Across Environments](12_Code_Promotion_Across_Environments.md)
-* Lab 10. [Dynamic Configuration updates using ConfigMap](17_Dynamic_Configuration_Updates_using_ConfigMap.md)
-* Lab 11. [Changing code on the fly](18_Changing_code_on_the_fly.md)
-* Lab 12. [Creating a CI/CD Pipeline](19._Creating_a_Pipeline.md)
+* lab 8. [Creating a gitlab server](Gitlab.md)
+* Lab 9. [Rollback Applications](11_Rollback_Applications.md)
+* Lab 10. [Code Promotion Across Environments](12_Code_Promotion_Across_Environments.md)
+* Lab 11. [Dynamic Configuration updates using ConfigMap](17_Dynamic_Configuration_Updates_using_ConfigMap.md)
+* Lab 12. [Changing code on the fly](18_Changing_code_on_the_fly.md)
+* Lab 13. [Creating a CI/CD Pipeline](19._Creating_a_Pipeline.md)
 ### END OF GUIDED LABS
 Now that you know the basics, please explore the platform. Here are a few suggestions, but you may try with your own code and applications.
 
