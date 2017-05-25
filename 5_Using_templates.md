@@ -40,7 +40,7 @@ Click the **Create** button.
 
 ![image](images/mysql_ephemeral_creation.png)
 
-Click **Go to overview**.
+Click **Continue to overview**.
 
 ![image](images/mysql_pod_on_proj_details.png)
 
@@ -143,7 +143,7 @@ In this step we will add a PHP frontend application that talks to recently creat
 
 Browse through the code in this repository. It has a simple php file (`dbtest.php`) that connects to the database and reads the values from the users table and displays them.
 
-To add a frontend again click on **Add to Project** to spin up a frontend application in the same **consoleproject-UserName**. It takes you to select image or template page and choose the **PHP** template under PHP apps.
+To add a frontend again click on **Add to Project** to spin up a frontend application in the same **consoleproject-UserName**. It takes you to select image or template page and choose the **PHP** template under PHP apps. Use the 5.6 version. 
 
 ![image](images/php.png)
 
@@ -153,7 +153,7 @@ Enter the following values for each parameters:
 * Name: dbtest
 * Git Repository URL: https://github.com/VeerMuchandi/dbtest
 ```
-Click onto the link "Show advanced routing, build, and deployment options", go to Deployment Configuration section and enter the following environment variables:
+Click onto the link "Show advanced options", go to Deployment Configuration section and enter the following environment variables:
 
 
 ![image](images/dbtest_deployment_env.png)

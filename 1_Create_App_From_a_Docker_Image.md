@@ -131,7 +131,7 @@ welcome-1-8d7nk   1/1       Running   0          4h
 Now you can delete all these components by running one command.
 
 ````
-$ oc delete all --all
+$ oc delete all -l app=welcome
 
 imagestream "welcome" deleted
 deploymentconfig "welcome" deleted

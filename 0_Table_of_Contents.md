@@ -18,7 +18,7 @@
 Now that you know the basics, please explore the platform. Here are a few suggestions, but you may try with your own code and applications.
 
 
-* Lab - Install GitLab and Configure with Ansible
+* Lab - [Install GitLab and Configure with Ansible](xtra4_GitLab.md)
 
 * Lab - Big Data with Spark and RADAnalytics
    * Lab 1 - [Spark intro (with Zeppelin)](xtra1_Spark-intro.md)
@@ -33,7 +33,7 @@ Now that you know the basics, please explore the platform. Here are a few sugges
     * part 2. [Adding Spring Boot to Project Catalog](15_Adding_Spring_Boot_S2I_Image_to_the_Project_Catalog.md)
     * part 3. [Adding Database to your SpringBoot App](16_Adding_database_to_your_Spring_Boot_Application.md)
 
-* Lab - Stateful Sets
+* Lab - [Stateful Sets](xtra3_Stateful-sets.md)
 
 * Lab for Operators
     * Lab 1 - Managing quotas
