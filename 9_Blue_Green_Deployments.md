@@ -100,7 +100,7 @@ blue-1-ruyrt   1/1       Running      0          19s
 Notice that the build pod has exited and you now have a single instance of the
 application running under one single pod.
 
-This application displays a blue square. 
+This application displays a blue square.
 
 **Step 6: List the service**
 
@@ -113,7 +113,7 @@ $ oc get service
 **Remember** to substitute the username. Expose the service:
 
 ```
-$ oc expose service blue --hostname=bluegreen.UserName..<<DomainNameSuffix>> --name=bluegreen
+$ oc expose svc blue --name=bluegreen
 ```
 
 **Step 8: Test the application**

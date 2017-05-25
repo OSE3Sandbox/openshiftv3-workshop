@@ -8,6 +8,8 @@ In this exercise you will learn to deploy a war file. We will assume that you bu
 
 **Step 1: Create project & folder structure**
 
+**Remember** to substitute the username
+
 ```sh
 oc new-project binarydeploy-UserName
 mkdir binarytest && cd binarytest
@@ -127,3 +129,9 @@ route "myapp" exposed
 ```
 
 You can use the route to access the application using the URL.
+
+```
+oc get route
+```
+
+**Keep this application running for the next lab**

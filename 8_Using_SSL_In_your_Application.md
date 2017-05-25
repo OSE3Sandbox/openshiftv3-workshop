@@ -15,37 +15,39 @@ $ oc project myjbossapp-UserName
 To view the routing config you will need to use the `oc get route` command
 
 ```
-$ oc get route/ks -o yaml
+$ oc get route/myapp -o yaml
 
 apiVersion: v1
 kind: Route
 metadata:
   annotations:
     openshift.io/host.generated: "true"
-  creationTimestamp: 2016-10-06T06:28:23Z
+  creationTimestamp: 2017-05-25T11:52:59Z
   labels:
-    app: ks
-  name: ks
-  namespace: myjbossapp-admin
-  resourceVersion: "33256"
-  selfLink: /oapi/v1/namespaces/myjbossapp-admin/routes/ks
-  uid: 14cf078c-8b8e-11e6-ba5b-080027782cf7
+    app: myapp
+  name: myapp
+  namespace: binarydeploy-UserName
+  resourceVersion: "178815"
+  selfLink: /oapi/v1/namespaces/binarydeploy-UserName/routes/myapp
+  uid: b2ecd8df-4140-11e7-a11f-0e702637dc7c
 spec:
-  host: ks-myjbossapp-UserName.apps.osecloud.com
+  host: myapp-binarydeploy-UserName.apps.ose3sandbox.com
   port:
     targetPort: 8080-tcp
   to:
     kind: Service
-    name: ks
+    name: myapp
     weight: 100
+  wildcardPolicy: None
 status:
   ingress:
   - conditions:
-    - lastTransitionTime: 2016-10-06T06:28:23Z
+    - lastTransitionTime: 2017-05-25T11:52:59Z
       status: "True"
       type: Admitted
-    host: ks-myjbossapp-UserName.apps.osecloud.com
-    routerName: router  
+    host: myapp-binarydeploy-UserName.apps.ose3sandbox.com
+    routerName: router
+    wildcardPolicy: None
 ```
 
 Note here that the `host:` is set to the FQDN that your application is running on.
@@ -59,35 +61,25 @@ OpenShift has a *wildcard* SSL certificate that it can use for any application. 
 Edit your routing configuration:
 
 ```
-oc edit route/ks
+oc edit route/myapp
 ```
 
 You are going to add `tls: termination: edge` right below the `host:` section. It should look something like this.
 
 ```
-apiVersion: v1
-kind: Route
-metadata:
-  annotations:
-    openshift.io/host.generated: "true"
-  creationTimestamp: 2015-12-22T03:56:30Z
-  labels:
-    app: ks
-  name: ks
-  namespace: myjbossapp-shchan
-  resourceVersion: "2903142"
-  selfLink: /oapi/v1/namespaces/myjbossapp-shchan/routes/ks
-  uid: fba5d1e6-a85f-11e5-be21-fa163ec58dad
+...
 spec:
-  host: ks-myjbossapp-UserName.apps.osecloud.com
+  host: myapp-binarydeploy-UserName.apps.ose3sandbox.com
   tls:
     termination: edge
   port:
-    targetPort: "8080"
+    targetPort: 8080-tcp
   to:
     kind: Service
-    name: ks
-status: {}
+    name: myapp
+    weight: 100
+  wildcardPolicy: None
+...
 ```
 
 **Step 4: Verify**
