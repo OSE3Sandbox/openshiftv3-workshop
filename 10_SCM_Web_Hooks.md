@@ -13,7 +13,8 @@ In Part I of the Lab we will:
 - Deploy an application using a source to image strategy.
 - Create a route to expose the newly deployed application.
 
-**Step 1:**
+**Step 1: Import an app in gitlab**
+
 We will import the bluegreen app previously used in your gitlab server.
 
 On your gitlab server, create a new project named lab-webhook, In "Import project from" select "git repo by url" and type this url :
@@ -21,7 +22,7 @@ https://github.com/RedHatWorkshops/bluegreen
 
 ![image](images/gitlab-webhook.png)
 
-Click on create project. 
+Click on create project.
 
 **Step 2: Create new project**
 
