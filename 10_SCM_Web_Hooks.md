@@ -17,8 +17,12 @@ In Part I of the Lab we will:
 
 We will import the bluegreen app previously used in your gitlab server.
 
-On your gitlab server, create a new project named lab-webhook, In "Import project from" select "git repo by url" and type this url :
+On your gitlab server, create a new project named lab-webhook.
+
+In "Import project from" select "git repo by url" and type this url :
 https://github.com/RedHatWorkshops/bluegreen
+
+In visibility, select Public
 
 ![image](images/gitlab-webhook.png)
 
@@ -34,10 +38,11 @@ $ oc new-project scm-web-hooks-UserName --display-name="Test WebHooks"
 
 **Step 3: Create new application**
 
-- We will use the blugreen app
+- We will use the blugreen app that you have imported in your gitlab server in the Step1
 
+**NOTE** replace USERXX by your openshift user login and USERNAME by your gitlab username
 ```
-$ oc new-app --image-stream=php --code=https://github.com/RedHatWorkshops/bluegreen --name=scm-web-hooks
+$ oc new-app --image-stream=php --code=http://gitlab-ce-USERXX-gitlab.apps.ose3sandbox.com/USERNAME/webhook.git  --name=scm-web-hooks
 ```
 
 **Step 4: Look at some of the created resources**
