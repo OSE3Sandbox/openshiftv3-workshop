@@ -1,6 +1,6 @@
 **Lab: GitLab**
 
-This lab sets up a GitLab Community Edition server with MongoDB and Redis backends. It also uses Ansible to provision users and repository.
+This lab sets up a GitLab Community Edition server with MongoDB and Redis backends.
 
 A GitLab template have been added to the environment in the openshift namespace. You can look at the template here: https://raw.githubusercontent.com/OSE3Sandbox/gitlab-ocp3/master/gitlab.yaml
 
@@ -16,36 +16,16 @@ Make sure to specify Gitlab instance hostname which should be the fully qualifie
 
 Also assign a github root user password.
 
-For example:  gitlab-ce-PROJECTNAME.apps.ose3sandbox.com
+For example:  gitlab-ce-gitlab-USERNAME.apps.ose3sandbox.com
 
 ![image](images/gitlab2.png)
 
-Wait for all the containers to start. Once they are all started, access our gitlab through a web browser.
+Wait for all the containers to start. Once they are all started, access our gitlab server through a web browser.
 
 You should see :
 
 ![image](images/gitlab-register.png)
 
-Create a new account.  You can also login as root, using any password ... Very secure :)  
+Create a new account then login.  You can also login as root, using any password ... You should take note of this very secure practice :)   
 
-
-
-
-The next part of this lab is using Ansible.
-If you don't have Ansible install on your machine, please follow the instructions described here:
-* (Ansible Installation)[http://docs.ansible.com/ansible/intro_installation.html]
-
-
-In your local copy of your github repository, edit the gitlab_repo playbook:  ansible/gitlab_repo.yaml and set the variables for your GitLab environment.
-
-This playbook will clone an existing repository into your GitLab installation.
-
-to execute the playbook:
-
-ansible-playbook ansible/gitlab_repo.yaml
-
-Login to the gitlab console.
-
-You should see the project:
-
-![image](images/gitlab-3.png)
+Create a project and put some files in.  You can git clone, git add and git push your project on your laptop to validate that your installation.
