@@ -13,16 +13,14 @@
 * Lab 9. [Blue/Green Deployments](9_Blue_Green_Deployments.md)
 * Lab 10. [Creating a gitlab server](GitLab.md)
 * Lab 11. [SCM Web Hooks](10_SCM_Web_Hooks.md)
-* Lab 11. [Rollback Applications](11_Rollback_Applications.md)
-* Lab 12. [Code Promotion Across Environments](12_Code_Promotion_Across_Environments.md)
-* Lab 13. [Dynamic Configuration updates using ConfigMap](17_Dynamic_Configuration_Updates_using_ConfigMap.md)
-* Lab 14. [Changing code on the fly](18_Changing_code_on_the_fly.md)
-* Lab 15. [Creating a CI/CD Pipeline](19._Creating_a_Pipeline.md)
+* Lab 12. [Rollback Applications](11_Rollback_Applications.md)
+* Lab 13. [Code Promotion Across Environments](12_Code_Promotion_Across_Environments.md)
+* Lab 14. [Dynamic Configuration updates using ConfigMap](17_Dynamic_Configuration_Updates_using_ConfigMap.md)
+* Lab 15. [Changing code on the fly](18_Changing_code_on_the_fly.md)
+* Lab 16. [Creating a CI/CD Pipeline](19._Creating_a_Pipeline.md)
 ### END OF GUIDED LABS
 Now that you know the basics, please explore the platform. Here are a few suggestions, but you may try with your own code and applications.
 
-
-* Lab - [Install GitLab and Configure with Ansible](xtra4_GitLab.md)
 
 * Lab - Big Data with Spark and RADAnalytics
    * Lab 1 - [Spark intro (with Zeppelin)](xtra1_Spark-intro.md)
