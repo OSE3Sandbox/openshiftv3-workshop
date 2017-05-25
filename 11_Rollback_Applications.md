@@ -4,7 +4,7 @@ In this lab we will see how we can rollback an application in OpenShift quickly 
 
 In this Lab we will:
 
-- Use the same app we deployed in Lab 10. If you haven't, please complete
+- Use the same app we deployed in Lab 11. If you haven't, please complete
 that Lab first.
 
 - Rollback the application using the OpenShift v3 command "rollback".
