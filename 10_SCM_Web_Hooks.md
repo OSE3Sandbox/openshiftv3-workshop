@@ -167,10 +167,9 @@ In this part of the Lab we will:
 
 **Step 3: Redeploy the application**
 
-- Edit in your GitHub account the `image.php` file.
-- One of the lines in line 9 or 10 should be commented out. Make a change so that
-the line that was previously commented out becomes active and pound the other one.
-- Commit the file.
+- Edit in your Gitlab account the `image.php` file.
+- Change the title of the page
+- Commit the file and go to the openshift web console.
 
 **Step 4: Monitor new deployment process**
 
