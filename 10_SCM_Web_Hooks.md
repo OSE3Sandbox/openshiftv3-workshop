@@ -15,11 +15,13 @@ In Part I of the Lab we will:
 
 **Step 1:**
 We will import the bluegreen app previously used in your gitlab server.
-On your gitlab server, create a new project named lab-webhook, In 440763
-"Import project from" select "git repo by url" and type this url :
+
+On your gitlab server, create a new project named lab-webhook, In "Import project from" select "git repo by url" and type this url :
 https://github.com/RedHatWorkshops/bluegreen
 
 ![image](images/gitlab-webhook.png)
+
+Click on create project. 
 
 **Step 2: Create new project**
 
