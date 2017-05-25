@@ -20,7 +20,16 @@ For example:  gitlab-ce-PROJECTNAME.apps.ose3sandbox.com
 
 ![image](images/gitlab2.png)
 
-Wait for all the containers to start.
+Wait for all the containers to start. Once they are all started, access our gitlab through a web browser.
+
+You should see :
+
+![image](images/gitlab-register.png)
+
+Create a new account.  You can also login as root, using any password ... Very secure :)  
+
+
+
 
 The next part of this lab is using Ansible.
 If you don't have Ansible install on your machine, please follow the instructions described here:
@@ -40,4 +49,3 @@ Login to the gitlab console.
 You should see the project:
 
 ![image](images/gitlab-3.png)
-  
