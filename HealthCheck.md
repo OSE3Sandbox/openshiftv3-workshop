@@ -44,4 +44,4 @@ Click **Applications → Deployments** on the left-side bar. Click ks. You will 
 
 You will also notice that the circle around the new deployment stays light blue for a while. This is a sign that the pod(s) have not yet passed their readiness checks — it’s working!
 
- ![image](images/apphealt-status.png)
+ ![image](images/apphealth-status.png)
