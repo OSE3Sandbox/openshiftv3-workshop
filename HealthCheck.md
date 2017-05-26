@@ -29,3 +29,19 @@ We are going to add both a readiness and liveness probe to the existing myjbossa
  Timeout: 1
 
  ![image](images/pipeline-readiness.png)
+
+ Liveness Probe
+
+ Path: /ws/healthz/
+
+ Initial Delay: 120
+
+ Timeout: 1
+
+ ![image](images/pipeline-liveness.png)
+
+ Click Save and then click the Overview button in the left navigation. You will notice that these changes caused a new deployment — they counted as a configuration change.
+
+You will also notice that the circle around the new deployment stays light blue for a while. This is a sign that the pod(s) have not yet passed their readiness checks — it’s working!
+
+ ![image](images/apphealt-status.png)
