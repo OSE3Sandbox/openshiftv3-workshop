@@ -1,3 +1,5 @@
+## Lab: Application Health
+
 As we have seen before in the UI via warnings, there is a concept of application health checks in OpenShift. These come in two flavors:
 
   - Readiness probe
@@ -13,6 +15,8 @@ A liveness probe checks if the container in which it is configured is still runn
 A readiness probe determines if a container is ready to service requests. If the readiness probe fails a container, the endpoints controller ensures the container has its IP address removed from the endpoints of all services. A readiness probe can be used to signal to the endpoints controller that even though a container is running, it should not receive any traffic from a proxy. Set a readiness check by configuring the template.spec.containers.readinessprobe stanza of a pod configuration.
 
 It sounds complicated, but it really isn’t. We will use the web console to add these probes to myjobbossapp, previously deployed
+
+## Add Health checks
 
 We are going to add both a readiness and liveness probe to the existing myjbossapp deployment. This will ensure that OpenShift does not add any instances to the service until they pass the readiness checks, and will ensure that unhealthy instances are restarted (if they fail the liveness checks)
 
