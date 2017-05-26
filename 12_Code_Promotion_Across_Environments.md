@@ -55,7 +55,9 @@ Tag	Spec		Created		PullSpec														Image
 latest	<pushed>	9 minutes ago	172.30.226.0:5000/development-UserName/myapp@sha256:7d0a5e0bbb0be497db86e2cac4f3ba47b5a6fa0d1a4e1529724ec1b21042e1f4
 ````
 
-In this case, the full image Id is `172.30.226.0:5000/development-UserName/myapp@sha256:7d0a5e0bbb0be497db86e2cac4f3ba47b5a6fa0d1a4e1529724ec1b21042e1f4`
+In this case, the full image Id is `development-UserName/myapp@sha256:7d0a5e0bbb0be497db86e2cac4f3ba47b5a6fa0d1a4e1529724ec1b21042e1f4`
+
+Note: Leave the repository off the Image name if present e.g. 172.30.226.0:5000/
 
 Now let us assume that this docker image is good and is ready to promote to QA. Let us tag this docker image using the `oc tag` command.
 
