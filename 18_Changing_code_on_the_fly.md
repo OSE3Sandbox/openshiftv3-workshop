@@ -80,7 +80,7 @@ Welcome to OpenShift!! My HostName is: nodejs-hello-1-8qigc
 
 Let us now make a small change to the application on your workstation.
 
-Edit `server.js` file using your favorite text editor (I use vi). The code snippet below displays the welcome message
+Edit `server.js` file using your favourite text editor (vim, Atom, etc ...). The code snippet below displays the welcome message
 
 ```
 app.get('/', function (req, res) {
