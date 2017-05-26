@@ -6,6 +6,7 @@
 * Lab 2. [Create an application using Docker Build Strategy using CLI](2_Create_App_Using_Docker_Build.md)
 * Lab 3. [Using Web Console](3_Using_Web_Console.md)
 * Lab 4. [Creating an application using JBoss EAP builder image](4_Creating_an_application_using_JBoss_EAP_builder_image.md)
+* Lab 5. [Application Health](HealthCheck.md)  
 * Lab 5. [Creating an application with frontend and backend database using templates](5_Using_templates.md)
 * Lab 6. [Scale Up Scale Down and Idle the application instances](6_Scale_up_and_Scale_down_the_application_instances.md)
 * Lab 7. [Binary deployment of a war file](7_Binary_Deployment_of_a_war_file.md)
