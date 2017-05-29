@@ -1,5 +1,9 @@
 ## Managing storage
 
+The files for this lab are located here: https://github.com/OSE3Sandbox/ops-storage1.git
+
+You can clone locally using: git clone https://github.com/OSE3Sandbox/ops-storage1.git
+
 In previous versions, OpenShift was using PV/PVC method to provision storage. A PV (Persistent Volume) resource is a representation of a storage resource (NFS, Gluster, EBS, Fiber...) in the OpenShift Cluster.  A PVC (Persistent Volume Claim) is a request for storage with specific attribute.
 
 Introduced in OpenShift 3.4, Storage Classes are a way of setting up persistent storage that offers more flexibility and control than the simple PV / PVC options.
