@@ -39,6 +39,6 @@ Now that you know the basics, please explore the platform. Here are a few sugges
 * Lab - [Stateful Sets](xtra3_Stateful-sets.md)
 
 * Lab for Operators
-    * Lab 1 - Managing quotas
-    * Lab 2 - Managing storage
+    * Lab 1 - [Managing storage](ops1-storage.md)
+    * Lab 2 - Managing quotas
     * Lab 3 - Networking
