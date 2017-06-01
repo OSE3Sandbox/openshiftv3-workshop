@@ -91,12 +91,10 @@ Now add a route to the service with the following command. `oc expose` command w
 ````
 $ oc expose service welcome
 
-oc get route
-
-
+$ oc get route
 
 NAME      HOST/PORT                     PATH      SERVICE   LABELS
-welcome   welcome.UserName.apps.osecloud.com             welcome   
+welcome   welcome.apps.ose3sandbox.com           welcome   
 ````
 
 **Step 4: Try your application**
@@ -104,7 +102,7 @@ welcome   welcome.UserName.apps.osecloud.com             welcome
 Access the application: Now access the application using curl (looking for 200 status code) or from the browser and see the result
 
 ````
-$ curl -Is http://welcome.UserName.<<DomainNameSuffix>>
+$ curl -Is http://welcome.UserName.apps.ose3sandbox.com
 ````
 
 Voila!! you created your first application using an existing docker image on OpenShift.
