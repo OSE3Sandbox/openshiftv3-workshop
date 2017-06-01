@@ -2,6 +2,8 @@
 
 In this exercise we will learn how to create an application from a Dockerfile. OpenShift takes Dockerfile as an input and generates your application docker image for you.
 
+Prerequisites : git client installed 
+
 **Step 1: Create a project or use an existing project**
 
 If you want to, you can create a new project based on what you have learned in the previous lab. Since we already have a project we will use it. Run the following command to make sure.
