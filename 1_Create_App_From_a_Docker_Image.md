@@ -93,8 +93,6 @@ $ oc expose service welcome
 
 oc get route
 
-````
-
 
 
 NAME      HOST/PORT                     PATH      SERVICE   LABELS
