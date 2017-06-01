@@ -86,7 +86,6 @@ However, there is no route for this application yet. So you cannot access this a
 
 Now add a route to the service with the following command. `oc expose` command will allow you to expose your service to the world so that you can access it from the browser.
 
-**Note**: In this example, I am using a domain name of `apps.osecloud.com`. **Ask the instructor for the domain name suffix** for your setup an change it.
 
 ````
 $ oc expose service welcome
