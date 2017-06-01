@@ -80,7 +80,7 @@ Based on what you learned previously get the list of running pods (Tip: `oc get 
 Enter the pod by running the following command. Substitute the pod name with your mysql pod name.
 
 ````
-$ oc rsh mysql-1-aewve
+$ oc rsh mysql-1-UserName
 
 bash-4.2$
 ````
