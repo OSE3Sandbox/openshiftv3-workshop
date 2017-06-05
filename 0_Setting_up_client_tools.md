@@ -38,7 +38,7 @@ variable called `PATH` from the OS. More information can be found about installa
 
 2. **RHEL:**
 
-	1.1. For Red Hat Enterprise Linux (RHEL) 7, you can install the CLI as an RPM using Red Hat Subscription Management (RHSM) if you have an active OpenShift Enterprise subscription on your Red Hat account:
+	2.1. For Red Hat Enterprise Linux (RHEL) 7, you can install the CLI as an RPM using Red Hat Subscription Management (RHSM) if you have an active OpenShift Enterprise subscription on your Red Hat account:
 
 	```shell
   	$ sudo subscription-manager attach --pool=<OPENSHIFT_pool_ID>
@@ -48,14 +48,13 @@ variable called `PATH` from the OS. More information can be found about installa
 
 3. **Windows:**
 
-    2.1. Use oc.exe to open an OpenShift shell.
-	If you getting error from running oc, go to git-scm.com to download git bash for Windows (during installation you need to specify in the selection to integrate with the command prompt)
+  3.1. Use oc.exe to open an OpenShift shell. If you getting error from running oc, go to git-scm.com to download git bash for Windows (during installation you need to specify in the selection to integrate with the command prompt)
 
-	2.2. Download and install Notepad++ and install the JSON plugin or use http://jsonlint.com/ to edit and validate JSON.
+	3.2. Download and install Notepad++ and install the JSON plugin or use http://jsonlint.com/ to edit and validate JSON.
 
   	http://ammonsonline.com/formatted-json-in-notepad/
 
-	2.3. Configure your default editor to be Notepad++
+	3.3. Configure your default editor to be Notepad++
 
 
 **CLI basic configuration**

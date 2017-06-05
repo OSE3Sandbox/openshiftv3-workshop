@@ -2,6 +2,7 @@
 
 ## Lab Exercises Table of Contents
 * Lab 0. [Setting up client tools](0_Setting_up_client_tools.md)
+* Lab 0. [Setting up git](0_Setting_up_git.md)
 * Lab 1. [Creating an application from an existing Docker Image using CLI](1_Create_App_From_a_Docker_Image.md)
 * Lab 2. [Create an application using Docker Build Strategy using CLI](2_Create_App_Using_Docker_Build.md)
 * Lab 3. [Using Web Console](3_Using_Web_Console.md)
