@@ -60,6 +60,6 @@ Click on the **Resources** tab on the left to see that it would display the Quot
 
 ### Extra Credits
 
-Repeat lab 1 [Creating an application from an existing Docker Image using CLI](1_Create App From a Docker Image.md) using OpenShift Web Console.
+Repeat lab 1 [Creating an application from an existing Docker Image using CLI](1_Create_App_From_a_Docker_Image.md) using OpenShift Web Console.
 
 Spend a few minutes and familiarize using Web Console.
