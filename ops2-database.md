@@ -42,7 +42,7 @@ All this is great, but the Database is not really able to scale. Scaling the dat
 How to address this ?
 
 
-** Introducing Stateful Sets**
+## Introducing Stateful Sets ##
 
 StatefulSets is an API thought for running stateful applications and services on top of OpenShift/Kubernetes. It was introduced as an Alpha Feature in Kubernetes v1.3 and beta in Kubernetes 1.5 It became available in OpenShift starting with v3.3. Because of the architecture of Kubernetes it was, up to now, not easy to run stateful services and applications on top of it, but first ideas for so called “nominal services” were proposed early on, but were not realized because of other priorities.
 
