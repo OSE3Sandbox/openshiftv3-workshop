@@ -2,7 +2,7 @@
 
 In this exercise we will learn how to create an application from a Dockerfile. OpenShift takes Dockerfile as an input and generates your application docker image for you.
 
-Prerequisites : git client installed 
+Prerequisites : git client installed
 
 **Step 1: Create a project or use an existing project**
 
@@ -301,18 +301,17 @@ And then we check the route exposed.
 ```
 $ oc get routes
 
-NAME      HOST/PORT                                                          PATH      SERVICES   PORT       TERMINATION
-time      time-mycliproject-UserName.apps.osecloud.com                       time       8080-tcp   
-```
+NAME      HOST/PORT                                       PATH      SERVICES   PORT       TERMINATION   WILDCARD
+time      time-mycliproject-user02.apps.ose3sandbox.com             time       8080-tcp                 None
 
-**Note:** Unlike in the previous lab, this time we did not use --hostname parameter while exposing the service to create a route. OpenShift automatically assigned the project name extension to the route name.
+```
 
 **Step 6: Run the application**
 
 Now run the application by using the route you provided in the previous step. You can use either curl or your browser. The application displays time. **If you don't provide time.php extension, it displays apache's default index page.**
 
 ```
-$ curl time-mycliproject-UserName.apps.osecloud.com
+$ curl time-mycliproject-UserName.apps.ose3sandbox.com
 Wednesday 1st of July 2015 01:12:20 AM
 ```
 
