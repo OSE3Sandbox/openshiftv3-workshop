@@ -46,9 +46,10 @@ These labs can be done on their own as a separate track or as part of the full h
 * Lab 0.2 [Setting up client tools](0_Setting_up_client_tools.md)
 * Lab 0.3 [Setting up git](0_Setting_up_git.md)
 
+
 * Lab 1 - [Managing storage](ops1-storage.md)
 * Lab 2 - [Deploying a database](ops2-database.md)
-* Lab 3 - Deploying the frontend
+* Lab 3 - [Deploying the frontend](ops3-frontend.md)
 * Lab 4 - Managing multi-tenant networking
 * Lab 3 - Managing quotas
 * Lab 4 - Configuring audit
