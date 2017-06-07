@@ -21,4 +21,4 @@ After completing this section, you should be able to:
 
 3. **Windows:**
 
-  3.1. For Windows, use the package available here : https://git-for-windows.github.io/
+    3.1. For Windows, use the package available here : https://git-for-windows.github.io/
