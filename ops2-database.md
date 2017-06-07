@@ -88,6 +88,61 @@ WSREP_SST: [INFO] Cleaning up temporary directories (20161214 10:54:11.241)
 <br/>
 
 
+### Adding data to the database
+
+from the command line (or the UI), open a terminal to one of the pod:
+
+* oc rsh mysql-0    - Notice that the pod name is fixed in a StatefulSet
+
+Connect to the MySql Database:
+
+mysql -u mysqluser -p
+
+You will be taken to the `mysql` prompt. See the list of databases. You will notice that the sample database that you requested is added and available.
+
+````
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| sample             |
++--------------------+
+2 rows in set (0.00 sec)
+````
+
+Change over to use the `sample` database.
+
+````
+mysql> use sample;
+Database changed
+````
+
+Now `show tables` shows an empty set. So let us create a table and add some records using the commands shown below.
+
+Create the table:
+
+````sql
+create table users (user_id int not null auto_increment, username varchar(200),PRIMARY KEY(user_id));
+````
+
+Now we add some data:
+
+````sql
+insert into users values (null, 'joe');
+insert into users values (null, 'alice');
+````
+
+Verify that the records you added are there
+
+````sql
+select * from users;
+````
+
+Now `exit` MySQL client and `exit` out of the pod.
+
+
+
 <h2>Links</h2>
 <ul>
 <li><a href="https://kubernetes.io/docs/concepts/workloads/controllers/petset/">Kubernetes StatefulSet Documentation</a></li>
