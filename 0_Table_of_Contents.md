@@ -51,6 +51,6 @@ These labs can be done on their own as a separate track or as part of the full h
 * Lab 2 - [Deploying a database](ops2-database.md)
 * Lab 3 - [Deploying the frontend](ops3-frontend.md)
 * Lab 4 - [Managing multi-tenant networking](ops4-multitenant.md)
-* Lab 3 - Managing quotas
-* Lab 4 - Configuring audit
-* Lab 5 - Management tooling
+* Lab 5 - [Managing quotas](ops-quota.md)
+* Lab 6 - Configuring audit
+* Lab 7 - Management tooling
