@@ -141,6 +141,11 @@ select * from users;
 
 Now `exit` MySQL client and `exit` out of the pod.
 
+![image](images/data-rep1.png)
+
+you can validate that the MySQL Clustering is working correctly by connecting to a different container:
+
+![image](images/data-rep2.png)
 
 
 <h2>Links</h2>
