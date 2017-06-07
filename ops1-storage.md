@@ -18,20 +18,39 @@ One of the primary features of Storage Classes is that they can be used to provi
 * GlusterFS
 * Ceph RBD
 
-In this lab, we will be using GlusterFS.
+In this lab, we will be using GlusterFS or AWS EBS - confirm your installation with the instructor.
 
 #### Lab Scenario
 
-We’ve defined two Gluster classes to simulate two different types of storage:
-* “gluster-fast” will be our placeholder for a high I/O speed storage option (SSD-based, for instance)
-* "gluster-slow” will be our placeholder for a slower I/O speed storage option (like rotational-media old school hard drive storage)
+We’ve defined two storage classes to simulate two different types of storage:
+* “fast-storage”  will be our placeholder for a high I/O speed storage option (SSD-based, for instance)
+* "slow-storage” will be our placeholder for a slower I/O speed storage option (like rotational-media old school hard drive storage)
 
 We are going to deploy two applications into a new namespace. We will provision the fast storage to one of the apps and slow storage to the other.
 
 ##### Step 1 - Create Storage Classes
 
-Storage Classes have already been provisioned for you.
-To look at them, do:
+Look at one of the storage class (fast-aws-storageclass.yaml for example):
+
+```
+kind: StorageClass
+apiVersion: storage.k8s.io/v1beta1
+metadata:
+  name: fast-storage
+provisioner: kubernetes.io/aws-ebs
+parameters:
+  type: gp2
+  zone: us-east-1a
+```
+
+The yaml file defines the type of storage to be used, the location and the name of the storage class.
+
+To create a storage class, login to the OpenShift server using the oc cli and a user with cluster-admin privilege:
+
+* oc login
+
+* oc create -f STORAGE_CLASS_FILE
+
 
 * oc get storageclasses
 
@@ -39,16 +58,18 @@ The output should look like:
 
 ```
 NAME                     TYPE
-cns-standard (default)   kubernetes.io/glusterfs
+standard (default)       kubernetes.io/glusterfs
 gluster-fast             kubernetes.io/glusterfs
 gluster-slow             kubernetes.io/glusterfs
 ```
 
-In this environment, cns-standard is set as the default storage class. The default storage class is use when no specific type of storage is requested.
+
+
+In this environment, standard is set as the default storage class. The default storage class is use when no specific type of storage is requested.
 
 Look at each storage class:
 
-* oc describe storageclass cns-standard
+* oc describe storageclass standard
 
 ```
 storageclass.beta.kubernetes.io/is-default-class=true
@@ -71,21 +92,23 @@ Deploy the demo application in your newly created project:
 oc new-app docker.io/nhripps/sleeper:v1.0 --name=fast-app
 ```
 
-##### Step 3 (Optional) - Create PVC using the CLI.
+###### Choose between 3a and 3b:
+
+##### Step 3a - Create PVC using the CLI.
 
 You can either create the PVC from the command line or directly in the OpenShift User Interface.
 
 <strong> If you choose to create using the UI, please skip this step. </strong>
 
-To create from the command line, look at the fast-gluster-pvc.yaml file:
+To create from the command line, look at the fast-pvc.yaml file:
 
 ```
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: pvc-gluster-fast
+  name: fast-pvc
   annotations:
-    volume.beta.kubernetes.io/storage-class: gluster-fast
+    volume.beta.kubernetes.io/storage-class: fast-storage
 spec:
   accessModes:
   - ReadWriteMany
@@ -94,12 +117,16 @@ spec:
       storage: 100Mi
 ```
 
-The annotation:     volume.beta.kubernetes.io/storage-class: gluster-fast
+The annotation:     volume.beta.kubernetes.io/storage-class: fast-storage
  is used to select the desired storage type.
 
+* oc create -f fast-pvc.yml  
+
+
+#### Step 3b - Create PVC from the UI
 Select your storage project in the OpenShift UI
 
-In the left-hand navigation panel, click the Storage tab. Here you should see the PersistentVolumeClaim that you have created. It should be bound to a GlusterFS Volume.
+In the left-hand navigation panel, click the Storage tab. Here you should see the PersistentVolumeClaim that you have created. It should be bound to a GlusterFS or AWS Volume.
 
 
 ##### Step 4 - Attach storage to your application
@@ -145,5 +172,23 @@ oc delete pod fast-app-xXXX
 * OpenShift will restart your application automatically
 * if you look in the newly created pod, your fast.txt file should be there.
 
+If using AWS, you can find your data by following this procedure:
 
-The Instructor can also show you the file in GlusterFS
+* oc get pvc
+
+![image](images/pvc-1.png)
+
+Your volume id is in the VOLUME field.
+On the OpenShift host, go to:
+
+* cd /var/lib/origin/openshift.local.volumes/pods
+
+OpenShift assigned a triplet key volume owner tag to organize the folder internally.
+
+From that location, you should be able to find your volume id directory.
+
+```
+find . -name pvc-d3831eaa-4b76-11e7-9449-0a2f71ce1f4e
+```
+
+The Instructor can also show you the file in GlusterFS or AWS EBS
