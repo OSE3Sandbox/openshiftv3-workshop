@@ -48,13 +48,12 @@ variable called `PATH` from the OS. More information can be found about installa
 
 3. **Windows:**
 
-  3.1. Use oc.exe to open an OpenShift shell. If you getting error from running oc, go to git-scm.com to download git bash for Windows (during installation you need to specify in the selection to integrate with the command prompt)
+   3.1. Use oc.exe to open an OpenShift shell. If you getting error from running oc, go to git-scm.com to download git bash for Windows (during installation you need to specify in the selection to integrate with the command prompt)
 
-  3.2. Download and install Notepad++ and install the JSON plugin or use http://jsonlint.com/ to edit and validate JSON.
+   3.2. Download and install Notepad++ and install the JSON plugin or use http://jsonlint.com/ to edit and validate JSON.
+        http://ammonsonline.com/formatted-json-in-notepad/
 
-  http://ammonsonline.com/formatted-json-in-notepad/
-
-  3.3. Configure your default editor to be Notepad++
+   3.3. Configure your default editor to be Notepad++
 
 
 **CLI basic configuration**
