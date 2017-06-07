@@ -63,7 +63,7 @@ command. It'll interactively ask you a server URL, username and password. The
 information is automatically saved in a CLI configuration file that is then used
 for subsequent commands.
 
-To login to a remote server use "oc login <hostname>:<port>"
+To login to a remote server use "oc login hostname:port"
 
 ```shell
 $ oc login https://openshift-master.ose3sandbox.com
