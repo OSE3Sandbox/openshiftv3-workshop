@@ -53,4 +53,4 @@ These labs can be done on their own as a separate track or as part of the full h
 * Lab 4 - [Managing multi-tenant networking](ops4-multitenant.md)
 * Lab 5 - [Managing quotas](ops-quota.md)
 * Lab 6 - [Configuring audit](ops-audit.md)
-* Lab 7 - Management tooling
+* Lab 7 - [Management tooling](ops-management.md)
