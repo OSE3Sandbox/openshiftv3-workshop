@@ -21,3 +21,17 @@ To login to Cockpit, go to the URL that was provided to you. Typically, Cockpit 
 ***EFK***
 
 ***Community Tools***
+
+Several community and 3rd party tools are available to monitor OpenShift. In this lab we will install Kube-Ops-View a read only open source system dashboard.
+
+To install Kube-Ops-View, follow this procedure:
+
+```
+oc new-project ocp-ops-view
+oc create sa kube-ops-view
+oc adm policy add-cluster-role-to-user cluster-admin system:serviceaccount:ocp-ops-view:kube-ops-view
+oc apply -f https://raw.githubusercontent.com/raffaelespazzoli/kube-ops-view/ocp/deploy-openshift/kube-ops-view.yaml
+oc expose svc kube-ops-view
+```
+
+![image](images/kube-ops.png)
