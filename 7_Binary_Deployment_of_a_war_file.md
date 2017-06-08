@@ -11,9 +11,9 @@ In this exercise you will learn to deploy a war file. We will assume that you bu
 **Remember** to substitute the username
 
 ```sh
-oc new-project binarydeploy-UserName
-mkdir binarytest && cd binarytest
-mkdir deployments
+$ oc new-project binarydeploy-UserName
+$ mkdir binarytest && cd binarytest
+$ mkdir deployments
 ```
 
 **Step 1: Create war file**
@@ -131,7 +131,7 @@ route "myapp" exposed
 You can use the route to access the application using the URL.
 
 ```
-oc get route
+$ oc get route
 ```
 
 **Keep this application running for the next lab**
