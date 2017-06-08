@@ -26,7 +26,7 @@ In this Lab, we will be:
 **Remember** to substitute the username
 
 ```
-$ oc new-project bluegreen-UserName --display-name="Blue Green Project" --description="Blue Green Project"
+$ oc new-project bluegreenUserName --display-name="Blue Green Project" --description="Blue Green Project"
 ```
 
 **Step 2: List existing image builder or image streams**
@@ -38,7 +38,7 @@ Image streams (oc new-app --image-stream=<image-stream> [--code=<source>])
 -----
 php
   Project: openshift
-  Tags:    5.5, 5.6, latest
+  Tags:    5.6, 7.0 latest
 ```
 
 **Step 3: Create an application**
