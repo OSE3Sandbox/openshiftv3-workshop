@@ -37,9 +37,9 @@ Click on **Terminal** tab, you will be able to access the pod from web console.
 
 If you click onto the **Metrics** tab under Pod and get an error viewing metrics on the browser, please do the following:
 
-1. Open https://hawkular.apps.osecloud.com/hawkular/metrics from a new tab on the same broswer
+1. Open https://hawkular-metrics-openshift-infra.apps.ose3sandbox.com/hawkular/metrics from a new tab on the same browser
 2. Click "Advanced" link
-3. Click "Proceed to hawkular.apps.osecloud.com (unsafe)"
+3. Click "Proceed to hawkular-metrics-openshift-infra.apps.ose3sandbox.com/hawkular/metrics (unsafe)"
 4. Refresh the browser where you login at OpenShift console.
 
 Click **Builds** on left menu and select **Builds**. Select the build name **time** and then click on **Configuration** tab.  Note there are webhook URLs. We will use them in a later lab exercise. You can start a build from the Web Console by pressing the **Start Build** button in the right top corner. It also gives you a command to start the build from CLI.
@@ -60,6 +60,6 @@ Click on the **Resources** tab on the left to see that it would display the Quot
 
 ### Extra Credits
 
-Repeat lab 1 [Creating an application from an existing Docker Image using CLI](1_Create_App_From_a_Docker_Image.md) using OpenShift Web Console.
+Repeat lab [Creating an application from an existing Docker Image using CLI](1_Create_App_From_a_Docker_Image.md) using OpenShift Web Console.
 
 Spend a few minutes and familiarize using Web Console.
