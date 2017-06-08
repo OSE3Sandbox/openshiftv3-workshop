@@ -15,7 +15,7 @@ $ oc project myjbossapp-UserName
 To view the routing config you will need to use the `oc get route` command
 
 ```
-$ oc get route/myapp -o yaml
+$ oc get route/ks -o yaml
 
 apiVersion: v1
 kind: Route
@@ -61,7 +61,7 @@ OpenShift has a *wildcard* SSL certificate that it can use for any application. 
 Edit your routing configuration:
 
 ```
-oc edit route/myapp
+oc edit route/ks
 ```
 
 You are going to add `tls: termination: edge` right below the `host:` section. It should look something like this.
