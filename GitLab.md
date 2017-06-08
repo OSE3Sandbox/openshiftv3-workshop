@@ -5,8 +5,9 @@ This lab sets up a GitLab Community Edition server with MongoDB and Redis backen
 A GitLab template have been added to the environment in the openshift namespace. You can look at the template here: https://raw.githubusercontent.com/OSE3Sandbox/gitlab-ocp3/master/gitlab.yaml
 
 Create a new project using oc or the OpenShift console.
-
-oc new-project gitlab-USERNAME
+```
+$ oc new-project gitlab-USERNAME
+```
 
 Using the OpenShift console, select "Add to Project" and select the gitlab template:
 
