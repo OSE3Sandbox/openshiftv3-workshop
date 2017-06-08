@@ -186,11 +186,11 @@ Idled DeploymentConfig mycliproject-veer/time (dry run)
 ```
 Go back to the webconsole. You will notice that the pods show up as idled.
 
-![image](images/idled_pods.jpeg)
+![image](images/idle.png)
 
 At this point the application is idled, the pods are not running and no resources are being used by the application. This doesn't mean that the application is deleted. The current state is just saved.. that's all.
 
-**Step 6: Reactivate your application** 
+**Step 6: Reactivate your application**
 Now click on the application route URL or access the application via curl.
 
 Note that it takes a little while for the application to respond. This is because pods are spinning up again. You can notice that in the web console.
@@ -204,8 +204,7 @@ So, as soon as the user accesses the application, it comes up!!!
 Scaling down is the same procedure as scaling up. Use the `oc scale` command on the `time` application `dc` setting.
 
 ```
-oc scale --replicas=1 dc/time
-
+$ oc scale --replicas=1 dc/time
 deploymentconfig "time" scaled
 ```
 Alternately, you can go to project overview page and click on ![image](images/scale_down.jpg) twice to remove 2 running pods.
