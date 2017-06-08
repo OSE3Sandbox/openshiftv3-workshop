@@ -101,15 +101,15 @@ mysql> show databases;
 | Database           |
 +--------------------+
 | information_schema |
-| sample             |
+| sampledb           |
 +--------------------+
 2 rows in set (0.00 sec)
 ````
 
-Change over to use the `sample` database.
+Change over to use the `sampledb` database.
 
 ````
-mysql> use sample;
+mysql> use sampledb;
 Database changed
 ````
 
@@ -143,9 +143,9 @@ In this step we will add a PHP frontend application that talks to recently creat
 
 Browse through the code in this repository. It has a simple php file (`dbtest.php`) that connects to the database and reads the values from the users table and displays them.
 
-To add a frontend again click on **Add to Project** to spin up a frontend application in the same **consoleproject-UserName**. It takes you to select image or template page and choose the **PHP** template under PHP apps. Use the 5.6 version. 
+To add a frontend again click on **Add to Project** to spin up a frontend application in the same **consoleproject-UserName**. It takes you to select image or template page and choose the **PHP** template under PHP apps. Use the 5.6 version.
 
-![image](images/php.png)
+![image](images/php7.png)
 
 Enter the following values for each parameters:
 
@@ -156,7 +156,7 @@ Enter the following values for each parameters:
 Click onto the link "Show advanced options", go to Deployment Configuration section and enter the following environment variables:
 
 
-![image](images/dbtest_deployment_env.png)
+![image](images/dc2.png)
 
 
 In the next section add a label:
