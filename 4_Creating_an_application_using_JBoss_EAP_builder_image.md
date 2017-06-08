@@ -29,7 +29,7 @@ Name: ks
 Git Repository URL: https://github.com/RedHatWorkshops/kitchensink
 ```
 
-Click on the blue link that says: **Show advanced routing, build, and deployment options**.
+Click on the blue link that says: **Show advanced options for source, routes, builds, and deployments**.
 
 On **Build Configuration** add a new *Environment Variable*.
 
@@ -47,7 +47,7 @@ Click on **Create** and then on **Continue to overview**.
 
 **Step 3: Build**
 
-Give it some seconds and you will see OpenShift starts the build process for you. You can view the list of builds using `oc get builds` command.
+Give it some seconds and you will see OpenShift starts the build process for you. You can view the list of builds using `oc get builds` command. Or you can click on the view log link in the web interface.
 
 ```
 $ oc get builds
