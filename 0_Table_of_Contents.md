@@ -53,4 +53,5 @@ These labs can be done on their own as a separate track or as part of the full h
 * Lab 5 - [Managing quotas](ops-quota.md)
 * Lab 6 - [Configuring audit](ops-audit.md)
 * Lab 7 - [Pruning old data](ops-prune.md)
-* Lab 8 - [Management tooling](ops-management.md)
+* Lab 8 - [Security Contexts](ops-scc.md)
+* Lab 9 - [Management tooling](ops-management.md)
