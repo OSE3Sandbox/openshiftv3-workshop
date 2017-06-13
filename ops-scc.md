@@ -13,7 +13,7 @@ Will display the list of available SCC in your system.
 
 ![image](images/scc-1.png)
 
-You can edit and change the existing SCC or create a new one to modify the behaviour of your OpenShift installation. In most situation, creating a new SCC is preferable to modifying the default ones.
+You can edit and change the existing SCC or create a new one to modify the behaviour of your OpenShift installation. In most situation, creating a new SCC is preferable to modifying the default ones to prevent problems during upgrades or new versions. 
 
 To edit a SCC:
 

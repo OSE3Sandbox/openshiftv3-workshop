@@ -97,7 +97,24 @@ The resource utilization is capped.
 
 
 
-#### Step 3 (Optional) - Performance test
+
+#### Step 3- Apply project level limit and quota
+
+In this section, we will create a complete example of a project using limits and quotas. Limits are applied to resource consumption and resource request, quotas are applied to the number of objects that can be created.
+
+Create a new project:
+
+```
+oc create myapp-dev
+```
+
+in that project, create a resource limits and resource quota using the following files:
+
+[Limits file](limits.yaml)
+[Quota file](Quota.yaml)
+
+
+#### Step 4 (Optional) - Performance test
 
 This step is optional. You will see how OpenShift autoscale applications and respond to additional load. Limits and scaling maximums will be enforced to protect the other applications and tenants of the platform.
 
@@ -123,7 +140,7 @@ In another browser window, you can monitor the behaviour of OpenShift (metrics, 
 ![image](images/autoscale.png)
 
 
-#### Step 4 - Apply Quota automatically to new projects
+#### Step 5 - Apply Quota automatically to new projects
 
 In this lab, we will learn how to apply automatically a quota when a new project is created.
 
