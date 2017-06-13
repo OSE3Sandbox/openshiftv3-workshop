@@ -110,8 +110,25 @@ oc create myapp-dev
 
 in that project, create a resource limits and resource quota using the following files:
 
-[Limits file](limits.yaml)
-[Quota file](Quota.yaml)
+* [Limits file](limits.yaml)
+
+* [Quota file](Quota.yaml)
+
+
+```
+oc create -f https://raw.githubusercontent.com/OSE3Sandbox/openshiftv3-workshop/master/limits.yaml
+```
+```
+oc create -f  https://github.com/OSE3Sandbox/openshiftv3-workshop/blob/master/quota.yaml
+```
+
+Create the application:
+
+```
+oc new-app docker.io/openshift/hello-openshift:v1.4.1
+```
+
+In the OpenShift UI, observe the quotas and limits for the myapp-dev project.
 
 
 #### Step 4 (Optional) - Performance test
