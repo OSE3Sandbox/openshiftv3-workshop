@@ -21,7 +21,7 @@ As you can see in that example, the Frontend and the Database of our projects ar
 
 To join the projects at the network level, use the following command:
 
-* oadm pod-network join-projects --to ss-user01 frontend-user01
+* oc adm pod-network join-projects --to ss-user01 frontend-user01
 
 After executing that command, the two projects should be on the same network VNID:
 
