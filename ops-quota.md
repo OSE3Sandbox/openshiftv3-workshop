@@ -168,21 +168,41 @@ OpenShift automatically provisions projects based on the template that is identi
 On the OpenShift server export the default project template to a file:
 
 ```
-oadm create-bootstrap-project-template -o yaml > template.yaml
+oc adm create-bootstrap-project-template -o yaml > template.yaml
 ```
 
 Edit the template.yaml to add the following section under the "objects:" section
 
 ```
 - apiVersion: v1
-  kind: ResourceQuota
+  kind: LimitRange
   metadata:
-    name: compute-resources
+    name: limits
   spec:
-    hard:
-      pods: "50"
+    limits:
+    - type: Pod
+      max:
+        cpu: 400m
+        memory: 200M
+      min:
+        cpu: 100m
+        memory: 50M
+    - type: Container
+      max:
+        cpu: 200m
+        memory: 100M
+      min:
+        cpu: 50m
+        memory: 10M
+      default:
+        cpu: 200m
+        memory: 100M
+      defaultRequest:
+        cpu: 200m
+        memory: 100M
+      maxLimitRequestRatio:
+        cpu: '4'
 ```
-
 Be careful when editing YAML file. Spaces and indentation must be preserved. Tabs are not allowed.
 
 Save the file
