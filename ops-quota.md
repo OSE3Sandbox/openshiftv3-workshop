@@ -7,45 +7,8 @@ It can be used for resource protection, capacity platform and governance of the 
 In this lab, we will create a simple resource quota in the frontend project.
 
 
-#### Step 1 - Apply Resource Quota
 
-To create a quota, create a file (quota.yml) with the following content:
-
-
-```
-apiVersion: v1
-kind: ResourceQuota
-metadata:
-  name: compute-resources
-spec:
-  hard:
-    pods: "4"
-
-```
-
-This quota puts a hard limit of 4 on the number of pods that can be created. Quota can be applied on the majority of OpenShift resources.
-
-To apply this quota, make sure you are in the frontend project:
-```
-oc project frontend-user01
-```
-and create the quota:
-```
-oc create -f quota.yml
-```
-In the UI, navigate to your frontend project. Using the arrows next to the POD counter, scale the deployment of the PHP application to 5 pods.
-
-You should see the following screen:
-
-![image](images/scale-test-1.png)
-
-The application will scale to 4 pods and display a message.
-You can look at the quota:
-
-![image](images/scale-test-2.png)
-
-
-#### Step 2 - Apply Resource Limits
+#### Step 1 - Apply Resource Limits
 
 In this lab, we will apply resource limits on a pod.
 Create a new project using the UI or the command line.
@@ -96,6 +59,34 @@ The resource utilization is capped.
 ![image](images/nodejs-perf4.png)
 
 
+#### Step 2 - Performance test
+
+This step is optional. You will see how OpenShift autoscale applications and respond to additional load. Limits and scaling maximums will be enforced to protect the other applications and tenants of the platform.
+
+**Deploy the load testing container**
+
+In this step, we will deploy a container with Centos and HTTperf (an open source load testing tool) installed.
+
+In the same project create above, deploy the httperf container.
+
+To deploy this container, from the command line use the following command:
+
+```
+oc new-app https://github.com/OSE3Sandbox/httperf
+```
+
+In the OpenShift UI, wait for the httperf container to deploy and go to the httperf pod terminal.
+
+In the home directory, edit the httperf.sh file to configure the endpoint specific to your deployment (myapp.myperf-user01.svc).
+Start the performance test by executing the script: ./httperf.sh
+The script will output the results when completed.
+
+![image](images/term.png)
+
+In another browser window, you can monitor the behaviour of OpenShift (metrics, autoscale).
+![image](images/autoscale.png)
+
+
 
 
 #### Step 3- Apply project level limit and quota
@@ -131,33 +122,7 @@ oc new-app docker.io/openshift/hello-openshift:v1.4.1
 In the OpenShift UI, observe the quotas and limits for the myapp-dev project.
 
 
-#### Step 4 (Optional) - Performance test
-
-This step is optional. You will see how OpenShift autoscale applications and respond to additional load. Limits and scaling maximums will be enforced to protect the other applications and tenants of the platform.
-
-**Deploy the load testing container**
-
-In this step, we will deploy a container with Centos and HTTperf (an open source load testing tool) installed.
-
-To deploy this container, from the command line use the following command:
-
-```
-oc new-app https://github.com/OSE3Sandbox/httperf
-```
-
-In the OpenShift UI, wait for the httperf container to deploy and go to the httperf pod terminal.
-
-In the home directory, edit the httperf.sh file to configure the endpoint specific to your deployment (myapp.performance-user01.svc).
-Start the performance test by executing the script: ./httperf.sh
-The script will output the results when completed.
-
-![image](images/term.png)
-
-In another browser window, you can monitor the behaviour of OpenShift (metrics, autoscale).
-![image](images/autoscale.png)
-
-
-#### Step 5 - Apply Quota automatically to new projects
+#### Step 4 - Apply Quota automatically to new projects
 
 In this lab, we will learn how to apply automatically a quota when a new project is created.
 
