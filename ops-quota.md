@@ -119,7 +119,7 @@ in that project, create a resource limits and resource quota using the following
 oc create -f https://raw.githubusercontent.com/OSE3Sandbox/openshiftv3-workshop/master/limits.yaml
 ```
 ```
-oc create -f  https://github.com/OSE3Sandbox/openshiftv3-workshop/blob/master/quota.yaml
+oc create -f https://raw.githubusercontent.com/OSE3Sandbox/openshiftv3-workshop/master/quota.yaml
 ```
 
 Create the application:
