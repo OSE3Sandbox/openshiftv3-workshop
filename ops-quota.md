@@ -105,14 +105,14 @@ In this section, we will create a complete example of a project using limits and
 Create a new project:
 
 ```
-oc create myapp-dev
+oc new-project myapp-dev
 ```
 
 in that project, create a resource limits and resource quota using the following files:
 
 * [Limits file](limits.yaml)
 
-* [Quota file](Quota.yaml)
+* [Quota file](quota.yaml)
 
 
 ```
