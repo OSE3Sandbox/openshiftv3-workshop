@@ -139,7 +139,7 @@ Now `exit` MySQL client and `exit` out of the pod.
 
 **Step 4: Add a PHP frontend to talk to this database**
 
-In this step we will add a PHP frontend application that talks to recently create database. The code is available on github to use at https://github.com/VeerMuchandi/dbtest.
+In this step we will add a PHP frontend application that talks to recently create database. The code is available on github to use at https://github.com/masauve/dbtest.
 
 Browse through the code in this repository. It has a simple php file (`dbtest.php`) that connects to the database and reads the values from the users table and displays them.
 
@@ -151,12 +151,12 @@ Enter the following values for each parameters:
 
 ```
 * Name: dbtest
-* Git Repository URL: https://github.com/VeerMuchandi/dbtest
+* Git Repository URL: https://github.com/masauve/dbtest
 ```
 Click onto the link "Show advanced options", go to Deployment Configuration section and enter the following environment variables:
 
 
-![image](images/dc2.png)
+![image](images/db2.png)
 
 
 In the next section add a label:
