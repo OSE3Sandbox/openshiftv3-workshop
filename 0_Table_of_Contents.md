@@ -18,6 +18,7 @@
 * Lab 14. [Code Promotion Across Environments](12_Code_Promotion_Across_Environments.md)
 * Lab 15. [Changing code on the fly](18_Changing_code_on_the_fly.md)
 * Lab 16. [Creating a CI/CD Pipeline](19._Creating_a_Pipeline.md)
+* Lab 17. [Persistent Storage](13_Using_Persistent_Storage.adoc)
 ### END OF GUIDED LABS
 Now that you know the basics, please explore the platform. Here are a few suggestions, but you may try with your own code and applications.
 
