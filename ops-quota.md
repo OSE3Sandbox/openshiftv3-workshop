@@ -10,10 +10,10 @@ for a little restraint.
 
 [WARNING]
 ====
-Before continuing, make sure you are using logged with the built-in system administrator account in OpenShift.
+Before continuing, make sure you are using logged with a system administrator account in OpenShift.
 
 ----
-oc login -u system:admin
+oc login -u admin
 ----
 ====
 
@@ -60,11 +60,11 @@ exercises.
 
 #### Modify the Project Request Template
 You won't actually have to make template changes in this lab -- we've made them
-for you already. Use `cat`, `less`, or your favorite editor to view the modified
+for you already. Using a web browser, navigate to the following URL to view the modified
 *Project Request Template*:
 
 ----
-cat /opt/lab/support/project_request_template.yaml
+https://raw.githubusercontent.com/OSE3Sandbox/openshiftv3-workshop/master/files
 ----
 
 Take note that there are two new sections added: *ResourceQuota* and
@@ -226,7 +226,7 @@ and simply instantiate the objects provided.
 Go ahead and execute the following:
 
 ----
-oc create -f /opt/lab/support/project_request_template.yaml -n default
+oc create -f https://raw.githubusercontent.com/OSE3Sandbox/openshiftv3-workshop/master/files/project_request_template.yaml -n default
 ----
 
 This will create the *Template* object in the `default` *Project*. You can now
@@ -244,6 +244,8 @@ project-request                 5 (5 blank)   7
 ----
 
 #### Edit the `master-config.yaml`
+Using SSH, login to OpenShift master host to mofidy the configuration
+
 For this exercise, we have not already configured things for you. Use your
 favourite editor (`vim`, `vi`, `nano`, etc.) to edit the master's configuration
 file using `sudo` privileges. For example:
