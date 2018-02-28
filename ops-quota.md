@@ -223,9 +223,9 @@ and simply instantiate the objects provided.
 
 Go ahead and execute the following:
 
-----
+```
 oc create -f https://raw.githubusercontent.com/OSE3Sandbox/openshiftv3-workshop/master/files/project_request_template.yaml -n default
-----
+```
 
 This will create the *Template* object in the `default` *Project*. You can now
 see the *Templates* in the `default` project with the following:
