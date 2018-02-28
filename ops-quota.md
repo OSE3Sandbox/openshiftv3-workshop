@@ -12,9 +12,9 @@ for a little restraint.
 ====
 Before continuing, make sure you are using logged with a system administrator account in OpenShift.
 
-----
+```
 oc login -u admin
-----
+```
 ====
 
 ### Background: Project Request Template
@@ -26,17 +26,17 @@ that is processed during the project request.
 Execute the following command to view the built-in default *Project Request
 Template*:
 
-----
+```
 oc adm create-bootstrap-project-template
-----
+```
 
 If you dig into the JSON output of this command, you will notice that there are
 various parameters defined at the end. Take a look at the help output for the
 `new-project` command:
 
-----
+```
 oc new-project -h
-----
+```
 
 Do you see how there is a `--display-name` directive on `new-project` and how
 there is a `PROJECT_DISPLAYNAME` parameter?
@@ -63,9 +63,9 @@ You won't actually have to make template changes in this lab -- we've made them
 for you already. Using a web browser, navigate to the following URL to view the modified
 *Project Request Template*:
 
-----
+```
 https://raw.githubusercontent.com/OSE3Sandbox/openshiftv3-workshop/master/files/project_request_template.yaml
-----
+```
 
 Take note that there are two new sections added: *ResourceQuota* and
 *LimitRange*.
@@ -75,20 +75,19 @@ The
 link:https://docs.openshift.com/container-platform/3.5/admin_guide/quota.html[quota
 documentation] provides a great description of what *ResourceQuota* is about:
 
-----
+```
 A resource quota, defined by a ResourceQuota object, provides constraints that
 limit aggregate resource consumption per project. It can limit the quantity of
 objects that can be created in a project by type, as well as the total amount of
 compute resources and storage that may be consumed by resources in that
 project.
-----
+```
 
 In our case, we are setting a specific set of quota for CPU, memory, storage,
 volume claims, and *Pods*. Take a look at the `ResourceQuota` section from the
-`project_request_template.yaml` file:
+project_request_template :
 
-[source,yaml]
-----
+```
 - apiVersion: v1
   kind: ResourceQuota
   metadata:
@@ -101,7 +100,7 @@ volume claims, and *Pods*. Take a look at the `ResourceQuota` section from the
       resourcequotas: 1
       requests.storage: 25Gi <5>
       persistentvolumeclaims: 5 <6>
-----
+```
 
 <1> While only one quota can be defined in a *Project*, it still needs a unique
 name/id.
@@ -124,22 +123,21 @@ The
 link:https://docs.openshift.com/container-platform/3.5/admin_guide/limits.html[limit
 range documentation] provides some good background:
 
-----
+```
 A limit range, defined by a LimitRange object, enumerates compute resource
 constraints in a project at the pod, container, image, image stream, and
 persistent volume claim level, and specifies the amount of resources that a pod,
 container, image, image stream, or persistent volume claim can consume.
-----
+```
 
 While the quota sets an upper bound on the total resource consumption within a
 project, the `LimitRange` generally applies to individual resources. For
 example, setting how much CPU an individual *Pod* or container can use.
 
 Take a look at the sample `LimitRange` definition that we have provided in the
-`project_request_template.yaml` file:
+project_request_template :
 
-[source,yaml]
-----
+```
 - apiVersion: v1
   kind: LimitRange
   metadata:
@@ -161,7 +159,7 @@ Take a look at the sample `LimitRange` definition that we have provided in the
         defaultRequest: <4>
           cpu: 100m
           memory: 512Mi
-----
+```
 
 The difference between requests and default limits is important, and is covered
 in the link:https://docs.openshift.com/container-platform/3.5/admin_guide/limits.html[limit
@@ -232,16 +230,16 @@ oc create -f https://raw.githubusercontent.com/OSE3Sandbox/openshiftv3-workshop/
 This will create the *Template* object in the `default` *Project*. You can now
 see the *Templates* in the `default` project with the following:
 
-----
+```
 oc get template -n default
-----
+```
 
 You will see something like the following:
 
-----
+```
 NAME              DESCRIPTION   PARAMETERS    OBJECTS
 project-request                 5 (5 blank)   7
-----
+```
 
 #### Edit the `master-config.yaml`
 Using SSH, login to OpenShift master host to mofidy the configuration
@@ -250,9 +248,9 @@ For this exercise, we have not already configured things for you. Use your
 favourite editor (`vim`, `vi`, `nano`, etc.) to edit the master's configuration
 file using `sudo` privileges. For example:
 
-----
+```
 sudo vim /etc/origin/master/master-config.yaml
-----
+```
 
 WARNING: If you are unfamiliar with the `vi` editor, you should probably use the
 `nano` editor. Use `^O` (Control + capital O) to save/write out the file after
@@ -265,20 +263,20 @@ exercise.
 
 You will want to edit the config to look like the following (just that section):
 
-----
+```
 ...
 projectConfig:
   projectRequestTemplate: "default/project-request"
   ...
-----
+```
 
 #### Restart the Master
 Since you have made a configuration change to the master, you will need to
 restart its service. You can do so with the following command with `sudo` privileges:
 
-----
+```
 sudo systemctl restart atomic-openshift-master
-----
+```
 
 ### Test the Project Request Template
 At this point you have reconfigured the master to use the *Project Request
@@ -290,19 +288,19 @@ action.
 When creating a new project, you should see that a *Quota* and a *LimitRange*
 are created with it. First, create a new project called `template-test`:
 
-----
+```
 oc new-project template-test
-----
+```
 
 Then, use `describe` to look at some of this *Project's* details:
 
-----
+```
 oc describe project template-test
-----
+```
 
 The output will look something like:
 
-----
+```
 Name:           template-test
 Namespace:      <none>
 Created:        5 seconds ago
@@ -333,56 +331,49 @@ Resource limits:
         ----            --------        ---     ---     ---
         Container       cpu             10m     4       4
         Container       memory          5Mi     1Gi     1Gi
-----
+
+```
 
 You can also see that the *Quota* and *LimitRange* objects were created:
 
-----
+```
 oc get quota -n template-test
-----
+```
 
 You will see:
 
-----
+```
 NAME                  AGE
 template-test-quota   2m
-----
+```
 
 And:
 
-----
+```
 oc get limitrange -n template-test
-----
+```
 
 You will see:
 
-----
+```
 NAME                   AGE
 template-test-limits   2m
-----
+```
 
 ### Configure Using the Installer
 While it is possible to configure the *ProjectRequestTemplate* using the advanced
 installer, you are still responsible for installing the template into the
 *Project* that you specify. For example, we could have specified the following:
 
-[source]
-----
+
+```
 osm_project_request_template='default/project-request'
-----
+```
 
 But, until a *Template* was created in the `default` *Project* called
 `project-request`, user *Project* creation would have failed due to a lack of
 the template. So, beware.
 
-### Clean Up
-If you wish, you can deploy the application from the Application Management
-Basics lab again inside this `template-test` project to observe how the *Quota*
-and *LimitRange* are applied. If you do, be sure to look at the JSON/YAML output
-(`oc get ... -o yaml`) for things like the *DeploymentConfig* and the *Pod*.
-
-Before you continue, you may wish to delete the *Project* you just created:
-
-----
-oc delete project template-test
-----
+If you wish, you can deploy the application from one of the previous labs:
+[Persistent Storage](13_Using_Persistent_Storage.adoc)
+or any other application to look at the behavious of quotas and limits
