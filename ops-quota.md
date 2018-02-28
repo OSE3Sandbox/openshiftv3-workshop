@@ -64,7 +64,7 @@ for you already. Using a web browser, navigate to the following URL to view the 
 *Project Request Template*:
 
 ----
-https://raw.githubusercontent.com/OSE3Sandbox/openshiftv3-workshop/master/files
+https://raw.githubusercontent.com/OSE3Sandbox/openshiftv3-workshop/master/files/project_request_template.yaml
 ----
 
 Take note that there are two new sections added: *ResourceQuota* and
