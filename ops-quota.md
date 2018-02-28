@@ -249,7 +249,7 @@ favourite editor (`vim`, `vi`, `nano`, etc.) to edit the master's configuration
 file using `sudo` privileges. For example:
 
 ```
-sudo vim /etc/origin/master/master-config.yaml
+sudo vi /etc/origin/master/master-config.yaml
 ```
 
 WARNING: If you are unfamiliar with the `vi` editor, you should probably use the
@@ -275,7 +275,8 @@ Since you have made a configuration change to the master, you will need to
 restart its service. You can do so with the following command with `sudo` privileges:
 
 ```
-sudo systemctl restart atomic-openshift-master
+sudo systemctl restart atomic-openshift-master-controllers
+sudo systemctl restart atomic-openshift-master-api
 ```
 
 ### Test the Project Request Template
@@ -359,6 +360,11 @@ You will see:
 NAME                   AGE
 template-test-limits   2m
 ```
+
+You can also look in the OpenShift Web Console.
+Select the project template-test and click resources -> quotas
+
+
 
 ### Configure Using the Installer
 While it is possible to configure the *ProjectRequestTemplate* using the advanced
