@@ -25,6 +25,14 @@ cat openshift_inventory.cfg
 
 In the initial state, your environment was configured to allow by default, which means that all traffic between all pods is currently allowed.
 
+You can list existing network policies with the following command:
+
+```
+oc get networkpolicy --all-namespaces
+```
+
+None are currently configured.
+
 In your OpenShift web console or using the command line, navigate to the msclient (MicroServices client) project. It contains a PHP frontend application.
 
 Locate the route and open it in your Web browser
