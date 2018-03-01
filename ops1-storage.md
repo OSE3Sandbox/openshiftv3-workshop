@@ -1,6 +1,9 @@
 ## Managing storage
 
-The files for this lab are located here: https://github.com/OSE3Sandbox/files
+The files for this lab are located here:
+
+* https://raw.githubusercontent.com/OSE3Sandbox/openshiftv3-workshop/master/files/fast-storage.yaml
+* https://raw.githubusercontent.com/OSE3Sandbox/openshiftv3-workshop/master/files/slow-storage.yaml
 
 
 In previous versions, OpenShift was using PV/PVC method to provision storage. A PV (Persistent Volume) resource is a representation of a storage resource (NFS, Gluster, EBS, Fiber...) in the OpenShift Cluster.  A PVC (Persistent Volume Claim) is a request for storage with specific attribute.
