@@ -1,4 +1,9 @@
-## Multi Tenant Networking
+## Network Policy Networking
+
+OpenShift can be configured to use several network configuration:
+1) subnet - a flat network across all projects
+2) multitenant - a coarse-grained network where each project is assigned a VNID. Only pods within the same VNID can communicate with each others on the internal OpenShift network.
+3) network policy - a fine-grained control on the network flow.
 
 The ovs-netorkpolicy network is configured in your OpenShift environment. Network Policy is an optional plug-in specification of how selections of pods are allowed to communicate with each other and other network endpoints. It provides fine-grained network namespace isolation using labels and port specifications
 
@@ -278,5 +283,3 @@ https://docs.openshift.com/container-platform/3.7/admin_guide/managing_networkin
 
 
 It is possible to configure "DEFAULT" policies such as Deny by default, or only from the same project by default or only on some ports by default.
-
- 
