@@ -10,7 +10,7 @@ These labs can be done on their own as a separate track or as part of the full h
 
 * Lab 1 - [The Basics](ops-basic.md)
 * Lab 2 - [Managing storage](ops1-storage.md)
-* Lab 3 - [Managing networking](ops4-policy.md)
+* Lab 3 - [Managing networking](ops4-networkpolicy.md)
 * Lab 4 - [Deploy Prometheus using ansible](opsnew-prometheus.md)
 * Lab 5 - [Managing quotas](ops-quota.md)
 * Lab 6 - [Configuring audit](ops-audit.md)
