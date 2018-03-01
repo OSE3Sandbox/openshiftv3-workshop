@@ -1,0 +1,8 @@
+kind: StorageClass
+apiVersion: storage.k8s.io/v1beta1
+metadata:
+  name: slow-storage
+provisioner: kubernetes.io/aws-ebs
+parameters:
+  type: gp2
+  zone: ca-central-1a

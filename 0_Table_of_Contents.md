@@ -1,5 +1,23 @@
 # OpenShift V3 Workshop Labs
 
+<a name="ops"></a>
+## Lab for Operators
+These labs can be done on their own as a separate track or as part of the full hackathon. For storage related labs, several versions of these labs are available, please refer to your instructor for storage specific to the environment you will be using.
+* Lab 0.1 Get SSH key and VM access - Instructions given on the whiteboard/workshop material provided by the instructor
+* Lab 0.2 [Setting up client tools](0_Setting_up_client_tools.md)
+* Lab 0.3 [Setting up git](0_Setting_up_git.md)
+
+
+* Lab 1 - [The Basics](ops-basic.md)
+* Lab 2 - [Managing storage](ops1-storage.md)
+* Lab 3 - [Managing networking](ops4-policy.md)
+* Lab 4 - [Deploy Prometheus using ansible](opsnew-prometheus.md)
+* Lab 5 - [Managing quotas](ops-quota.md)
+* Lab 6 - [Configuring audit](ops-audit.md)
+* Lab 7 - [Pruning old data](ops-prune.md)
+* Lab 8 - [Security Contexts](ops-scc.md)
+
+
 ## Lab Exercises Table of Contents
 * Lab 0. [Setting up client tools](0_Setting_up_client_tools.md)
 * Lab 1. [Setting up git](0_Setting_up_git.md)
@@ -38,20 +56,3 @@ Now that you know the basics, please explore the platform. Here are a few sugges
     * part 4. [Dynamic Configuration updates using ConfigMap](17_Dynamic_Configuration_Updates_using_ConfigMap.md)
 
 * Lab - [Stateful Sets](xtra3_Stateful-sets.md)
-
-<a name="ops"></a>
-## Lab for Operators
-These labs can be done on their own as a separate track or as part of the full hackathon. For storage related labs, several versions of these labs are available, please refer to your instructor for storage specific to the environment you will be using.
-* Lab 0.1 Get SSH key and VM access - Instructions given on the whiteboard/workshop material provided by the instructor
-* Lab 0.2 [Setting up client tools](0_Setting_up_client_tools.md)
-* Lab 0.3 [Setting up git](0_Setting_up_git.md)
-
-
-* Lab 1 - [The Basics](ops-basic.md)
-* Lab 2 - [Managing storage](ops1-storage.md)
-* Lab 3 - [Managing networking](ops4-subnet.md)
-* Lab 4 - [Deploy Prometheus using ansible](opsnew-prometheus.md)
-* Lab 5 - [Managing quotas](ops-quota.md)
-* Lab 6 - [Configuring audit](ops-audit.md)
-* Lab 7 - [Pruning old data](ops-prune.md)
-* Lab 8 - [Security Contexts](ops-scc.md)

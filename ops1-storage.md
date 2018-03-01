@@ -1,8 +1,7 @@
 ## Managing storage
 
-The files for this lab are located here: https://github.com/OSE3Sandbox/ops-storage1.git
+The files for this lab are located here: https://github.com/OSE3Sandbox/files
 
-You can clone locally using: git clone https://github.com/OSE3Sandbox/ops-storage1.git
 
 In previous versions, OpenShift was using PV/PVC method to provision storage. A PV (Persistent Volume) resource is a representation of a storage resource (NFS, Gluster, EBS, Fiber...) in the OpenShift Cluster.  A PVC (Persistent Volume Claim) is a request for storage with specific attribute.
 
@@ -28,9 +27,13 @@ We’ve defined two storage classes to simulate two different types of storage:
 
 We are going to deploy two applications into a new namespace. We will provision the fast storage to one of the apps and slow storage to the other.
 
+The storage scenario is implemented with the same type of storage, in a real life scenario, we would use different storage provider
+
 ##### Step 1 - Create Storage Classes
 
 Look at one of the storage class (fast-aws-storageclass.yaml for example):
+
+<Strong> IMPORTANT, AWS EBS storage is pinned to an AWS zone, you must change the storage to map to the region where your nodes are deployed</Strong>
 
 ```
 kind: StorageClass
@@ -40,7 +43,7 @@ metadata:
 provisioner: kubernetes.io/aws-ebs
 parameters:
   type: gp2
-  zone: us-east-1a
+  zone: ca-central-1a
 ```
 
 The yaml file defines the type of storage to be used, the location and the name of the storage class.
@@ -111,11 +114,13 @@ metadata:
     volume.beta.kubernetes.io/storage-class: fast-storage
 spec:
   accessModes:
-  - ReadWriteMany
+  - ReadWriteOnce
   resources:
     requests:
       storage: 100Mi
 ```
+
+
 
 The annotation:     volume.beta.kubernetes.io/storage-class: fast-storage
  is used to select the desired storage type.
@@ -126,7 +131,7 @@ The annotation:     volume.beta.kubernetes.io/storage-class: fast-storage
 #### Step 3b - Create PVC from the UI
 Select your storage project in the OpenShift UI
 
-In the left-hand navigation panel, click the Storage tab. Here you should see the PersistentVolumeClaim that you have created. It should be bound to a GlusterFS or AWS Volume.
+In the left-hand navigation panel, click the Storage tab. Here you should see the PersistentVolumeClaim that you have created. It should be bound to an AWS Volume.
 
 
 ##### Step 4 - Attach storage to your application
@@ -190,5 +195,3 @@ From that location, you should be able to find your volume id directory.
 ```
 find . -name pvc-d3831eaa-4b76-11e7-9449-0a2f71ce1f4e
 ```
-
-The Instructor can also show you the file in GlusterFS or AWS EBS
