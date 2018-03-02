@@ -59,7 +59,7 @@ Look at the other projects:
 msinfra project - contains the Email Service and database to store registration information. A typical backend application.
 
 ```
-oc get pods -n msinfa
+oc get pods -n msinfra
 ```
 
 ```
