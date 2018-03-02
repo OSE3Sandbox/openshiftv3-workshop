@@ -34,12 +34,6 @@ You should see the OpenShift application nodes where your application will be de
 It is possible to put any node of the OpenShift environment into maintenance by
 marking it as non-schedulable following by _evacuation_ of all pods on the node.
 
-These operations require elevated privileges. Ensure you are logged in as
-cluster admin:
-
-```
-oc login -u system:admin
-```
 
 To view where the pods are running in your environment, use the following command:
 ```
