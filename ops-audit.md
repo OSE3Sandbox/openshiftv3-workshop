@@ -25,8 +25,8 @@ auditConfig:
 Restart the OpenShift master:
 
 ```
-systemctl restart atomic-openshift-master
-
+sudo systemctl restart atomic-openshift-master-controllers
+sudo systemctl restart atomic-openshift-master-api
 ```
 
 To filter the audit log for a specific user, you can do:
