@@ -197,7 +197,7 @@ https://raw.githubusercontent.com/OSE3Sandbox/openshiftv3-workshop/master/files/
 and run:
 
 ```
-oc create -f allow-3306.yaml -n msinfra
+oc create -f https://raw.githubusercontent.com/OSE3Sandbox/openshiftv3-workshop/master/files/allow-3306.yaml -n msinfra
 ```
 
 Validate that the network policy is running by registering new users and going to hack.php page again:
@@ -226,7 +226,7 @@ https://raw.githubusercontent.com/OSE3Sandbox/openshiftv3-workshop/master/files/
 and run:
 
 ```
-oc create -f default-deny.yaml -n msinfra
+oc create -f https://raw.githubusercontent.com/OSE3Sandbox/openshiftv3-workshop/master/files/default-deny.yaml -n msinfra
 ```
 
 If you try to register new users, the registration from the UI will now fail as there is no access to the backend.
@@ -265,7 +265,7 @@ https://raw.githubusercontent.com/OSE3Sandbox/openshiftv3-workshop/master/files/
 and run:
 
 ```
-oc create -f allow-namespace.yaml -n msinfra
+oc create -f https://raw.githubusercontent.com/OSE3Sandbox/openshiftv3-workshop/master/files/allow-namespace.yaml -n msinfra
 ```
 
 The last step is to label the source namespace that will consume the msinfra API.

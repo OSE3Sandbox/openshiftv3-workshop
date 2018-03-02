@@ -64,9 +64,9 @@ The output should look like:
 
 ```
 NAME                     TYPE
-standard (default)       kubernetes.io/glusterfs
-gluster-fast             kubernetes.io/glusterfs
-gluster-slow             kubernetes.io/glusterfs
+standard (default)       kubernetes.io/aws-ebs
+gluster-fast             kubernetes.io/aws-ebs
+gluster-slow             kubernetes.io/aws-ebs
 ```
 
 
@@ -149,11 +149,11 @@ In this step, we will attach persistent storage to our application.
 * In the Template section of this Deployment summary page, find the Volumes heading and the ‘Add storage’ link below it. Click this link to move to the ‘Add Storage’ view.
 
 * In the ‘Add Storage’ view:
-    * You should see that you can choose which PersistentVolumeClaim to use for this deployment. If you have done Step 3, use your ‘pvc-gluster-fast’ storage claim. If not, create one with the following attributes:
+    * You should see that you can choose which PersistentVolumeClaim to use for this deployment. If you have done Step 3, use your ‘pvc-aws-fast’ storage claim. If not, create one with the following attributes:
 
 ![image](images/sc-image-2.png)
 
-* In the next screen, Under the ‘Volume’ heading, set the value of ‘Mount Path’ to /mountpoint. This is an existing directory path inside of the container that will become a mount point in the container for our Gluster volume.
+* In the next screen, Under the ‘Volume’ heading, set the value of ‘Mount Path’ to /mountpoint. This is an existing directory path inside of the container that will become a mount point in the container for our aws volume.
 
 * Press the ‘Add’ button to apply this change
 
